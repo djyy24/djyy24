@@ -6,7 +6,7 @@
   <link href="https://djyy24.github.io/djyy24/atom.xml" rel="self"/>
   
   <link href="https://djyy24.github.io/djyy24/"/>
-  <updated>2023-08-02T04:24:24.246Z</updated>
+  <updated>2023-08-02T07:54:21.123Z</updated>
   <id>https://djyy24.github.io/djyy24/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>辽宁大学崇山校区WEB互动平面图</title>
+    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/</id>
+    <published>2023-08-02T06:27:48.000Z</published>
+    <updated>2023-08-02T07:54:21.123Z</updated>
+    
+    <content type="html"><![CDATA[<p>此平面地图为信息学院20级学生自制的HTML5互动地图，在基于卫星地图绘制的几何图形平面地图的基础上增加了图文信息窗口，地点搜索等互动功能。<br>       制作互动地图的想法早在一年前就有了，2022年6月曾计划制作基于JavaFX的辽大互动地图，但因为Java软件对运行环境有一定要求，可能不易于使用，从而难以推广，最终没有落实。今年学习了WEB开发，于是借助HTML5灵活易用的特点以及JavaScript对运行环境的低要求，制作了这个更易于使用的HTML5互动地图。<br>       六月份先后两次，趁着天气晴朗拍摄了共计183张崇山校区各个建筑外景照片，用于地点图文信息的编写。所有代码，文案及美工等工作都由一人完成，从5月26日开始，耗时19天完成1.0版本，实现了地点图文信息查看以及模糊搜索功能。<br>       由于一个人经历有限，掌握的信息不算多，因此地图提供的信息不够完善，后续将在更新时补充更多更准确的信息。<br>       此平面图为基于HTML5的网页版平面图，通过浏览器即可使用，并带有互动功能，提供更加丰富的信息。<br>       <img src="https://djyy24.github.io/imgs/lnumap.png"><br><br>在地点搜索框中输入建筑名称或者院系，店铺等名称后，点击“搜索”按钮后在地图上会突出显示所查找的地点。<br>       <img src="https://djyy24.github.io/imgs/lnumap_search.png"><br></p><p>点击地图中的建筑图块弹出图文信息窗口，点击图片切换按钮可以查看更多图片。<br>       <img src="https://djyy24.github.io/imgs/lnumap_loc.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;此平面地图为信息学院20级学生自制的HTML5互动地图，在基于卫星地图绘制的几何图形平面地图的基础上增加了图文信息窗口，地点搜索等互动功能。&lt;br&gt;       制作互动地图的想法早在一年前就有了，2022年6月曾计划制作基于JavaFX的辽大互动地图，但因为Java软件对</summary>
+      
+    
+    
+    
+    
+    <category term="HTML" scheme="https://djyy24.github.io/djyy24/tags/HTML/"/>
+    
+    <category term="JavaScript" scheme="https://djyy24.github.io/djyy24/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第三版个人博客正式上线</title>
     <link href="https://djyy24.github.io/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/"/>
     <id>https://djyy24.github.io/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/</id>
     <published>2023-08-02T04:01:21.000Z</published>
-    <updated>2023-08-02T04:24:24.246Z</updated>
+    <updated>2023-08-02T07:56:01.511Z</updated>
     
-    <content type="html"><![CDATA[<p>基于Hexo框架的第3版个人博客正式启用。<br>这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。<br><img src="/djyy24/.io//%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/1.png" alt="1"></p>]]></content>
+    <content type="html"><![CDATA[<p>基于Hexo框架的第3版个人博客正式启用。<br>这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。</p><p>第一版个人博客：2023年4月6日制作，WEB前端开发刚开始的时候做的简单页面，作为临时页面使用。<br><img src="https://djyy24.github.io/imgs/blog1.png"><br><br>第二版个人博客：2023年6月21日制作，纯手写的HTML5＋JavaScript页面，参考一些官方网站的布局设计，加入了较多的图文信息，提供Minecraft资源等下载。<br><img src="https://djyy24.github.io/imgs/blog2.png"><br><br>第三版个人博客：2023年8月2日制作，使用Hexo框架以及改版的Butterfly主题，视觉效果较第二版有了较大提升。<br><img src="https://djyy24.github.io/imgs/blog3.png"><br><br>第三版告别了纯手打的HTML博客。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;基于Hexo框架的第3版个人博客正式启用。&lt;br&gt;这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。&lt;br&gt;&lt;img src=&quot;/djyy24/.io//%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%</summary>
+    <summary type="html">&lt;p&gt;基于Hexo框架的第3版个人博客正式启用。&lt;br&gt;这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。&lt;/p&gt;
+&lt;p&gt;第一版个人博客：2023年4月6日制作，WEB前端开发刚开始的时候做的简单页面，作为临时页面使用。&lt;br&gt;&lt;img src=&quot;https://</summary>
       
     
     
