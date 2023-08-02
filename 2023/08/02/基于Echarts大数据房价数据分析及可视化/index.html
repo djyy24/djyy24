@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>基于Echarts大数据房价数据分析及可视化 | Minecraft相思故的个人博客</title><meta name="author" content="Minecraft相思故|对江邀月24"><meta name="copyright" content="Minecraft相思故|对江邀月24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="1.1 线性规划模型回归是基于已有数据对新的数据进行预测，比如预测股票走势。这里我们主要讲简单线性回归。基于标准的线性回归，可以扩展出更多的线性回归算法。线性回归就是能够用一个直线较为精确地描述数据之间的关系，这样当出现新的数据的时候，就能够预测出一个简单的值。线性回归模型有很好的可解释性，可以从权重W直接看出每个特征对结果的影响程度。线性回归适用于X和y之间存在线性关系的数据集，可以使用计算机辅">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Echarts大数据房价数据分析及可视化">
+<meta property="og:url" content="https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
+<meta property="og:site_name" content="Minecraft相思故的个人博客">
+<meta property="og:description" content="1.1 线性规划模型回归是基于已有数据对新的数据进行预测，比如预测股票走势。这里我们主要讲简单线性回归。基于标准的线性回归，可以扩展出更多的线性回归算法。线性回归就是能够用一个直线较为精确地描述数据之间的关系，这样当出现新的数据的时候，就能够预测出一个简单的值。线性回归模型有很好的可解释性，可以从权重W直接看出每个特征对结果的影响程度。线性回归适用于X和y之间存在线性关系的数据集，可以使用计算机辅">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://djyy24.github.io/imgs/fcfx.png">
+<meta property="article:published_time" content="2023-08-02T11:29:47.000Z">
+<meta property="article:modified_time" content="2023-08-02T13:23:18.159Z">
+<meta property="article:author" content="Minecraft相思故|对江邀月24">
+<meta property="article:tag" content="大数据">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://djyy24.github.io/imgs/fcfx.png"><link rel="shortcut icon" href="/djyy24/img/favicon.png"><link rel="canonical" href="https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/djyy24/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/djyy24/',
+  algolia: undefined,
+  localSearch: {"path":"/djyy24/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于Echarts大数据房价数据分析及可视化',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-02 21:23:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/djyy24/atom.xml" title="Minecraft相思故的个人博客" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/djyy24/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/djyy24/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/djyy24/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/djyy24/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/djyy24/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/mods"><span> MC模组</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/maps"><span> 建筑地图</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/softs"><span> 软件资源</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/drafts"><span> 高清图纸</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 社交平台</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://space.bilibili.com/346273252"><span> 哔哩哔哩</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5e301ef70000000001001e94"><span> 小红书</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://weibo.com/minecraftxiangsigu"><span> 微博</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://tieba.baidu.com/home/main?un=default_name77"><span> 百度贴吧</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://djyy24.top/images/hd.png"><span> MCMOD</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> WEB应用</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/daohang"><span> 网址导航</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:91"><span> 崇山校区地图</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:88"><span> 在线备忘录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:100"><span> 图书馆系统</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://djyy24.github.io/imgs/fcfx.png')"><nav id="nav"><span id="blog-info"><a href="/djyy24/" title="Minecraft相思故的个人博客"><span class="site-name">Minecraft相思故的个人博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/djyy24/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/mods"><span> MC模组</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/maps"><span> 建筑地图</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/softs"><span> 软件资源</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/drafts"><span> 高清图纸</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 社交平台</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://space.bilibili.com/346273252"><span> 哔哩哔哩</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5e301ef70000000001001e94"><span> 小红书</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://weibo.com/minecraftxiangsigu"><span> 微博</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://tieba.baidu.com/home/main?un=default_name77"><span> 百度贴吧</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://djyy24.top/images/hd.png"><span> MCMOD</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> WEB应用</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https:djyy24.top/daohang"><span> 网址导航</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:91"><span> 崇山校区地图</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:88"><span> 在线备忘录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://8.141.83.100:100"><span> 图书馆系统</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于Echarts大数据房价数据分析及可视化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-02T11:29:47.000Z" title="发表于 2023-08-02 19:29:47">2023-08-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-02T13:23:18.159Z" title="更新于 2023-08-02 21:23:18">2023-08-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/djyy24/categories/IT%E6%8A%80%E6%9C%AF/">IT技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基于Echarts大数据房价数据分析及可视化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>1.1 线性规划模型</strong><br>回归是基于已有数据对新的数据进行预测，比如预测股票走势。这里我们主要讲简单线性回归。基于标准的线性回归，可以扩展出更多的线性回归算法。线性回归就是能够用一个直线较为精确地描述数据之间的关系，这样当出现新的数据的时候，就能够预测出一个简单的值。<br>线性回归模型有很好的可解释性，可以从权重W直接看出每个特征对结果的影响程度。线性回归适用于X和y之间存在线性关系的数据集，可以使用计算机辅助画出散点图来观察是否存在线性关系。我们尝试使用一条直线来拟合数据，使所有点到直线的距离之和最小。</p>
+<p><strong>1.2 项目概述</strong><br>本项目通过爬虫获取链家网深圳二手房信息，包括二手房的区县，地段，介绍，税收，户型，朝向等信息，对这些信息进行预处理之后存入数据框。通过Echarts绘制数据可视化图表，获得对深圳房产信息的直观展示大屏，根据数据可视化大屏，对照深圳市地图以及深圳各个地段背景信息，分析出影响深圳市房价的因素。以及对房产数据构建线性回归模型，并利用tkinter构建图形用户界面，获取用户输入后在程序底层使用线性回归模型进行计算，为用户显示出房产估价，便于用户的使用。</p>
+<p><strong>二.利用网络爬虫获取二手房信息</strong><br><strong>2.1 数据来源及介绍</strong><br>    数据集收集了链家深圳二手房网共计19,547条二手房销售数据，每个数据反映了深圳市一套二手房的地段，单价等基本信息。爬取到的信息存入“深圳市房价.xlsx”中。<br>表格 1 数据集各字段含义<br>列名	含义<br>Area	房产所在县区<br>Title	房产描述<br>Community	所在小区<br>Position	所在地段<br>Tax	纳税情况<br>Total_price	总价（万元）<br>Unit_price	单价（元&#x2F;平方米）<br>hourseType	户型<br>hourseSize	面积大小（平方米）<br>direction	房屋朝向<br>fitment	装修情况</p>
+<p><strong>2.2 网络爬虫概述</strong><br>网络爬虫是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。爬虫对某一站点访问，如果可以访问就下载其中的网页内容，并且通过爬虫解析模块解析得到的网页链接，把这些链接作为之后的抓取目标，并且在整个过程中完全不依赖用户，自动运行。<br>网络爬虫按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。</p>
+<p><strong>2.3 requests库概述</strong><br>Python中的requests库为第三方库，是基于Urllib采用Apache2 Licensed开源协议的HTTP库。通过requests.session()函数构建一个会话。使用headers&#x3D;设置请求头，请求头包含了浏览器信息，用于把爬虫伪装成浏览器。使用get(“url”,headers&#x3D;”headers”)获取网页，对应了HTTP协议中的GET请求，使用这个函数可以取得URL对应的HTML文档内容（字符串），用于在其中提取信息。<br>HTTP协议，又称为超文本传输协议，是互联网上应用最为广泛的一种网络协议，所有的WWW文件都必须遵循这个标准。设计HTTP最初的目的是提供一种接收HTML页面的方法，HTTP是一种基于“请求与响应”模式的，无状态的应用层协议。HTTP协议采用URL（统一资源定位符）作为单位网络资源的。在互联网上每个文件都有它专属的URL地址，它包含的信息指出文件的位置，以及浏览器或程序应该如何处理它。</p>
+<p><strong>2.4 利用网络爬虫爬取链家地产网站深圳二手房信息</strong><br>访问链家二手房交易网站（地点选择深圳市）通过观察网页页面结构以及开发者模式下寻找HTML元素与网页结构的对应关系，确定了网页中单价，总价，描述信息，是否有五年房本以及所在区县等信息以及各个信息在HTML中的位置。通过观察HTML文档中这些信息上下文的特点，利用正则表达式对需要提取的信息进行定位，定位之后提取出这些信息，保存到pandas数据框中。<br>本次项目使用Python request库对链家房产网站的二手房出售信息进行爬取。<br>分为以下步骤：<br>1准备程序包。.Python爬虫需要安装req  uests包，因此先使用pip install命令导入导入requests包，设置请求header，并且根据链家二手房网站的基本URL建立带有请求header的会话，以便于后续发送get请求爬取HTML字符串。<br>2.定位页面元素。打开浏览器，进入到链家深圳市福田区的二手房交易网站，打开开发者模式，通过认真观察网页的HTML以及将要提取的数据附近HTML字符串的特征，构造符合将要提取数据的正则表达式，在所爬取的HTML字符串中匹配到所需的总价，位置等信息，以便于后续进行爬虫操作。<br>3.构造请求URL。依次进入链家地产网的深圳市各县区的页面，发现每个页面URL最后一段字符串对应一个区县。建立一个字典，键表示为各个区县，值表示为URL最后一段那段字符串，例如福田区对应futianqu。然后构造循环，依次带入字典中的元素（键和值），根据链家网站深圳各个区县的页面URL构造网站请求URL（即在&#x2F;ershoufang&#x2F;后面加上字典里面存的区县字段）<br>4.获取二手房数量。在上面构造的循环里面加上一个获取页数和二手房总数的请求，获取每个区县的二手房数量以及这个区县的页面总页数。<br>5.数据提取与保存。构造一段循环，爬取每一页中的HTML，爬取使用已构造的URL，通过GET请求爬取各个区县每一页的房产数据，并且按照逐条房地产信息把HTML拆分成若干段，然后再构造一个循环把上述HTML中每一部分，在所爬取的HTML片段中提取房产信息，保存到pandas数据框中，移交给数据清洗部分。<br>本次爬取的数据为房价信息的原始数据，后续过程中需要对所爬取的房地产数据进行分析以及数据可视化，在这其中较为核心的数据为房产的单价和总价信息，后续会利用这些数字信息进行可视化以及数据分析，因此需要把这些数据处理好以便于后续计算。<br> <img src="http://djyy24.github.io/imgs/fjfx_1.png"><br>图 1 采集到的数据</p>
+<p><strong>三.利用pandas库对二手房数据进行清洗</strong><br><strong>3.1数据清洗的概述</strong><br>在大数据分析过程中，计算数据之前需要对数据进行清洗，去掉数据中的无用值。数据清洗是对数据进行重新审查和校验的过程，目的在于删除重复信息、纠正存在的错误，并提供数据一致性。我们获得的（录入计算机后的）原始数据，有时并不能直接用于计算，建模等后续操作，因为可能存在重复或者错误，比如重复录入，小数点错误等，这是需要将这些“脏”的东西洗掉，以保证数据的正确，整洁等。</p>
+<p><strong>3.2 对二手房数据进行预处理</strong><br>在上一步（利用网络爬虫爬取链家地产网站深圳二手房信息）我们利用python中的requests库构建爬虫爬取到了链家深圳各县区的二手房房价，描述信息，位置与户型等数据。但是有一点需要注意到，HTML为超文本标记语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。超文本是一种组织信息的方式，它通过超级链接方法将文本中的文字、图表与其他信息媒体相关联。这种组织信息方式将分布在不同位置的信息资源用随机方式进行连接，为人们查找，检索信息提供方便。比较常见的HTML5文档为字符串构成的文档，在网页HTML中直接提取出来的面积，房地产总价和单价信息为字符串类型，字符串类型不是int,float等数字类型，无法直接进行数值计算。通过float()直接把提取出的总价信息与面积信息转换成float类型。但是在所爬取的字符串的“单价”数字中存在逗号分隔，使用str. replace(‘,’, ‘’)去掉逗号，再转换成float类型，存入数据框。</p>
+<p><strong>3.3 使用如下几个步骤对所采集的房地产数据进行清洗</strong><br>1.遍历数据框的每一行，检查数据中除“税收”字段外的所有字段，删掉其中存在“None”的数据。<br>2.遍历数据中的“税收”字段，由于这个字段提取的是网站中房产信息描述中是否有“房本满五年“，没有这个标签则在即不到任何信息，采集不到信息则在此房产信息存入数据框时此字段存入None。由于该字段只有“房本满五年”与“None”两种取值，因此去掉所有这两个值之外的数据。<br>3.检查float型字段（总价，单价，面积），因为房价和面积不可能存在小于零的情况或者等于零的情况，我们不能排除链家网站服务器中的数据是准确的，因而需要把采集到的数据进行清理，去掉所有不合理的数据，这三个字段的取值必须为大于0的数，不可取为0或负数。</p>
+<p><strong>3.4 数据清洗的意义</strong><br>大数据时代，产生的数据多以非结构化数据为主，由于非结构化数据并不能直接为研究所用，因此多数情况下，需要将非结构结构化数据转化成结构化数据，而在这个过程中，就存在必要的数据清洗，将其转化成符合研究的数据格式。</p>
+<p><strong>四.利用Echarts百度开源可视化工具对数据进行可视化</strong><br><strong>4.1 Echarts概述</strong><br>ECharts（Enterprise Charts）是百度开源的数据可视化工具，底层依赖轻量级Canvas库ZRender。兼容了几乎全部常用浏览器的特点，使它可广泛用于PC客户端和手机客户端。ECharts能辅助开发者整合用户数据，创新性的完成个性化设置可视化图表。本项目在Python中导入Pyecharts实现房地产价格数据的可视化，并导出HTML文件，在浏览器中显示图表大屏。<br>制作数据大屏分为以下主要步骤：<br>1.导入Pyecharts第三包，作出准备；<br>2.按照因素对数据集进行分组，存入临时数据框；<br>3.对临时数据集进行计算，求出图表绘制所需的平均值或比例等数据；<br>4.把数据集代入Pyecharts库函数对应的图标生成函数，在函数的参数中调整相应的设置；<br>5.渲染图表，重复上述4步做出其他图表；<br>6.使用Pyecharts当中的组合图表功能，将所有图片拼接在一张html文件中进行展示</p>
+<p><strong>4.2 绘制深圳市二手房的数据图表</strong><br>4.2.1深圳市各区县房价数据地图可视化<br>Pyecharts包提供了通过数据框与样式设置生成地图，柱状图等可视化图形的方法，通过此第三方包可以生成视觉效果较为直观的各类图表，做成数据大屏。<br>使用dataframe.groupby()对处理后的数据按照区县为键进行聚合，求出每个区县的房价均价平均值并且重置索引。初始化Map，把区县和均价的数据（把元转换成万元）以及相关设置（标题，单位，标签显示等）带入到初始化的Map中，然后使用map.render_notebook()把map渲染在Jupyter Notebook里面，用于图表显示测试。<br>4.2.2 深圳市二手房均价TOP 10地段<br>上一步使用的是临时数据框，因而data数据框中保存的仍然是原始数据。使用dataframe.groupby()把data数据框中的数据以地段为键进行分组，求得每组平均值存入临时数据框temp，生成深圳市各区域地段的平均房价，根据所得数据生成柱状图。<br>4.2.3 深圳市二手房 户型数量分布<br>把预处理好的数据的户型列提取出来，存入临时数据框temp。计算临时数据框中所保存的每种户型类型各自所占的比例。把每种户型按照比例排名之后使用Echart.charts中的Pie根据所统计及排名的数据生成饼状图。<br>4.2.4 深圳市房源描述词云图<br>把预处理好的数据的房源描述信息提取出来，存入一个字符串中，使用jieba库对房源描述信息进行分词。把去掉停用词的词语列表中取出其中数量最多的50个词，放入一个集合中，生成词云。使用Echarts中的Page组合图表，布局后生成chart_config.json，然后调用page.save_resize_html生成图表大屏的HTML。<br><img src="http://djyy24.github.io/imgs/fcfx.png"><br>图 2 数据可视化大屏</p>
+<p><strong>五.利用线性回归模型进行房产估价</strong><br><strong>5.1 线性回归模型概述</strong><br>线性回归方程是利用数理统计中的回归分析，来确定两种或两种以上变数间相互依赖的定量关系的一种统计分析方法之一。线性回归也是回归分析中第一种经过严格研究并在实际应用中广泛使用的类型。按自变量个数可分为一元线性回归分析方程和多元线性回归分析方程。<br>在线性回归中，数据使用线性预测函数来建模，并且未知的模型参数也是通过数据来估计。这些模型被叫做线性模型。最常用的线性回归建模是给定X值的y的条件均值是X的仿射函数。不太一般的情况，线性回归模型可以是一个中位数或一些其他的给定X的条件下y的条件分布的分位数作为X的线性函数表示。像所有形式的回归分析一样，线性回归也把焦点放在给定X值的y的条件概率分布，而不是X和y的联合概率分布（多元分析领域）。<br>线性回归优点：善于获取数据集中的线性关系；适用于在已有了一些预先定义好的变量并且需要一个简单的预测模型的情况下使用；训练速度和预测速度较快；在小数据集上表现很好；结果可解释，并且易于说明；当新增数据时，易于更新模型；不需要进行参数调整（下面的正则化线性模型需要调整正则化参数）；不需要特征缩放等优点。<br>线性回归缺点：不适用于非线性数据；预测精确度较低；可能会出现过度拟合（下面的正则化模型可以抵消这个影响）；分离信号和噪声的效果不理想，在使用前需要去掉不相关的特征；不了解数据集中的特征交互；如果数据集具有冗余的特征，那么线性回归可能是不稳定的等缺点。<br>我们使用线性回归方程对所采集到的深圳市二手房信息构建回归模型，以达到用户可以输入自己期望的地段，户型等信息了解该基本信息下大概的房产价格，用户可以根据所估算的价格进行初步决策，以及用户可以输入多组信息相互比较，得出自己的结论。</p>
+<p><strong>5.2 构建前的数据预处理</strong><br>构建线性回归方程之前的数据预处理过程如下：<br>1.去掉总价，面积，区县这三列，总价取决于单价和面积，因为面积无法确定单价，也就是说这一列的取值不会决定单价最终的值，所以把总价这一列去掉。由于面积和单价没有因果关系，面积为总价除以单价所得的值，不会影响单价，所以面积这一列去除掉。本次线性回归分析针对的自变量中含有地段，一个县区包含了多个地段，地段的精确度比计算县区更大，所预测的信息更精准，因此使用地段信息代替区县作为房产区域位置。<br>2.剩余的数据中存在字符串类型，因此应该把字符串转变为数字类型，一便于计算线性回归方程。使用groupby()把数据框中的一个自变量列和单价列提取出来，按照自变量的值（字符串）进行分类，求出每一类的均值，把这个均值赋给这个自变量中对应的字符串，把字符串和数字的对应关系保存到excel文件中。由于tax列只有两种取值，所以这一列取为布尔值即可。处理完成各列数据后，每一列的数据均为数值类型，以便于后续过程中构建线性回归模型。预处理之后的数据存入excel中，命名为“数字化.xlsx”。</p>
+<p><strong>5.3 利用房产数据构建线性回归方程</strong><br>    1.数据集的准备。把上一步预处理之后的数据读取excel后存入一个数据框，作为构建线性回归方程的数据集。<br>2.设置自变量和因变量。从数据框中取出作为自变量的列，把这些列存入X变量中，作为自变量矩阵。从数据框中取出一列（单价）作为因变量，存入变量Y中。<br>3.模型的初始化。使用LinearRegression()初始化线性回归模型，保存到变量LR中，此时LR中还没有训练过的线性回归模型。<br>4.准备训练集和测试集。使用train_test_split()对训练集进行拆分，随机拆分成8：2的两部分，其中80%作为训练集，20%作为测试集。<br>5.训练模型。把已经拆分的自变量和因变量（训练集部分）带入LR对象的fit()方法中，进行模型的构建，取出模型中的五个权重和截距，保存在文本文件weight.txt中，用于后续房价预测程序权重截距的读取。<br>6.平均方误差的计算以及决定系数的计算。使用mean_squared_error()函数，带入因变量的实际值和预测值，计算出模型的平均方误差。然后把拆分出的测试集中的自变量和因变量带入linear_regressor.score(x_test,y_test)函数中求得决定系数为0.71左右，说明模型的预测存在一些的误差。</p>
+<p><strong>5.4 房价估算程序以及利用tkinter包构建图形用户界面</strong><br>5.4.1 房价估算程序<br>构建函数calPrice(args)，参数中包括了地段，户型等基本信息和面积。在这个函数中，首先读取数据预处理过程中保存的数值和字符串的对应关系文档（excel），获得字符串对应的数。然后使用with open()打开线性回归方程构建过程中生成的文本文件，提取其中的值并转换为float类型。构建房价计算方程，函数的形参对应的数值作为这个方程的自变量，实参作为这个方程的自变量系数，后面加上截距，通过带入形参对应的数值可以计算出房价单价信息。单价信息乘上面积获得总价信息。把单价信息和总价信息放入一个元组，这个元组作为函数的返回值。若形参中存在非法字段，则返回由两个’Nan’构成的元组，后续步骤中若返回值为(‘Nan’,’Nan’)则弹出提示信息，不显示房价信息。<br>5.4.2 房价估算程序GUI界面<br>在GUI（图形用户界面）中，用户可以通过其中的图形对象进行操作，设备收到操作指令后，对用户进行结果的反馈，反馈的结果即用户接收到的信息也是图形对象，因此用户无须具备专业知识和操作技能就能够实现操作。作为一种界面显示格式， GUI设计极大地方便了用户的操作。<br>为便于用户使用房价估算程序，我们使用Python中的图形用户界面程序包“tkinter”。首先使用tk.Tk()建立一个root容器，初始化文字提示信息以及各个控件，包括地段输入框，装修信息的下拉菜单，税收的复选框等输入控件及计算按钮和输出框。按照Grid网格把GUI每个元素排列进容器中，设置元素间的距离防止排列过于紧凑。为计算按钮绑定函数，在所绑定的函数中设置输入控件的取值代码，把这些值带入到calPrice函数，把返回值显示在右侧的单价显示框和总价显示框中。<br><img src="http://djyy24.github.io/imgs/fjfx_3"><br>图 3 GUI界面</p>
+<p><strong>六.房产价格数据分析</strong><br><strong>6.1 县区因素对房价供需关系的影响</strong><br>观察深圳各县区的房价分布地图可知，深圳市南山区和福田区是深圳市房价评均单价最高的两个县区，达到了7万元以上的每平方米单价，而远离市中心的坪山区房价较低，仅3.5万元&#x2F;平方米。深圳市各个区域的房价与供需关系存在巨大差异。例如，福田区和南山区是深圳市房价较高的区域，这与它们的区位、教育资源、经济发展水平等因素有关。同时，不同区域的政策支持和市场预期也会影响其房价的供需关系。</p>
+<p><strong>6.2 区域因素对房价供需关系的影响</strong><br>深圳市各个街区的房价与供需关系也存在巨大差异。在地图中寻找这些排名前十的街区我们发现，房价较高的街区多数位于深圳市的金融行业活跃的地区，靠近港口的贸易发达地区，位于深圳和香港交界处的保税区附近或者配套设施齐全，教育资源与经济水平较发达的市中心地区。<br><img src="http://djyy24.github.io/imgs/fjfx_3"><br>图 4 深圳房价Top10地段分布<br>例如，深圳湾以及科技园区域位于深圳口岸，贸易活动频繁，港口经济贸易发达，房价较高。香蜜湖地区位于深圳和香港交界处，附近有福田火车站与保税区等地方，处于地方交通枢纽，商业发达，交通方便，房价仅次于深圳湾。<br>福田区和南山区是深圳市房价较高的区域，这与它们的区位、教育资源、经济发展水平等因素有关。同时，不同区域的政策支持和市场预期也会影响其房价的供需关系。</p>
+<p><strong>6.3 从深圳市房源描述词云图可以看出</strong><br>购房者最多关注的是“唯一”，“诚心”，“五年”等信息，可以看出购房者希望从出售者以及开发商的诚心，购房者希望可以安心的卖到一套符合心意的房产。从“五年“可以看出购房者希望可以买到有五年房本的二手房减少上税，减轻经济上的负担。其它方面例如购房者关心户型与采光，房产的居住体验如何，是否舒适等因素，以及地理位置上是否靠近地铁口，交通上是否方便等因素。</p>
+<p><strong>七.评价与优化</strong><br>本项目是一个基于大数据技术的房价数据分析及可视化项目。通过该项目，我们对大量的房地产数据进行了的分析和可视化呈现，为房地产行业的相关决策提供了有价值的洞察和参考。<br>在项目中，我们采集了大量的房地产数据，包括房价、税收、地理位置、建筑特征等。通过数据清洗和预处理，我们确保了数据的准确性和一致性，并为后续的分析工作做好了准备。<br>通过这个项目，我们为房地产行业提供了一个分析工具，帮助相关人员更好地理解市场动态、制定决策和规划战略。同时，我们还通过可视化呈现，将复杂的数据变得易于理解和消化，为非技术人员提供了一种直观的方式来获取有关房价数据的信息。<br>基于线性回归的房地产估价程序可以比较粗略地估计出指定地段，户型等条件下房产的价格，以供房地产购买者估算房价，进而做出相应的选择。由于自变量数量较少，离散变量处理不够科学等原因，该估价程序较现实价格存在一定的差异，不能很准确地估计出房价信息。<br>总体而言，本项目的成功实施为房价数据的深度分析和可视化展示提供了一个可行的解决方案。在未来，该项目还可以进一步扩展和优化，以适应不断变化的房地产市场需求，为更多的决策者和投资者提供有价值的数据洞察。</p>
+<p>2023.5.30编写</p>
+<p>keywords: “Python,大数据,线性回归,可视化”</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://djyy24.github.io/djyy24">Minecraft相思故|对江邀月24</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/">https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://djyy24.github.io/djyy24" target="_blank">Minecraft相思故的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/djyy24/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/djyy24/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="http://djyy24.github.io/imgs/fcfx.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/djyy24/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/" title="还原90年代老式旅馆楼房"><img class="cover" src="https://img1.imgtp.com/2023/08/02/pA4hSNr6.png" onerror="onerror=null;src='/djyy24/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">还原90年代老式旅馆楼房</div></div></a></div><div class="next-post pull-right"><a href="/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/" title="辽宁大学崇山校区WEB互动平面图"><img class="cover" src="http://djyy24.github.io/imgs/lnumap.png" onerror="onerror=null;src='/djyy24/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">辽宁大学崇山校区WEB互动平面图</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/djyy24/img/favicon.png" onerror="this.onerror=null;this.src='/djyy24/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Minecraft相思故|对江邀月24</div><div class="author-info__description">基于Hexo框架的新版个人博客</div></div><div class="card-info-data site-data is-center"><a href="/djyy24/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/djyy24/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/djyy24/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/djyy2021"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:3078581376@qq.com" target="_blank" title="邮箱"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/346273252" target="_blank" title="B站"><i class="fas fa-brands fa-bilibili" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://weibo.com/minecraftxiangsigu" target="_blank" title="微博"><i class="fas fa-brands fa-weibo" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">2023年8月2日正式启用第三版博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/djyy24/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/" title="建筑楼层批量复制Mod"><img src="https://i2.mcmod.cn/editor/upload/20230214/1676387547_583000_sTcG.webp" onerror="this.onerror=null;this.src='/djyy24/img/404.jpg'" alt="建筑楼层批量复制Mod"/></a><div class="content"><a class="title" href="/djyy24/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/" title="建筑楼层批量复制Mod">建筑楼层批量复制Mod</a><time datetime="2023-08-02T14:10:06.000Z" title="发表于 2023-08-02 22:10:06">2023-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/djyy24/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/" title="还原90年代老式旅馆楼房"><img src="https://img1.imgtp.com/2023/08/02/pA4hSNr6.png" onerror="this.onerror=null;this.src='/djyy24/img/404.jpg'" alt="还原90年代老式旅馆楼房"/></a><div class="content"><a class="title" href="/djyy24/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/" title="还原90年代老式旅馆楼房">还原90年代老式旅馆楼房</a><time datetime="2023-08-02T14:00:05.000Z" title="发表于 2023-08-02 22:00:05">2023-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/" title="基于Echarts大数据房价数据分析及可视化"><img src="http://djyy24.github.io/imgs/fcfx.png" onerror="this.onerror=null;this.src='/djyy24/img/404.jpg'" alt="基于Echarts大数据房价数据分析及可视化"/></a><div class="content"><a class="title" href="/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/" title="基于Echarts大数据房价数据分析及可视化">基于Echarts大数据房价数据分析及可视化</a><time datetime="2023-08-02T11:29:47.000Z" title="发表于 2023-08-02 19:29:47">2023-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/" title="辽宁大学崇山校区WEB互动平面图"><img src="http://djyy24.github.io/imgs/lnumap.png" onerror="this.onerror=null;this.src='/djyy24/img/404.jpg'" alt="辽宁大学崇山校区WEB互动平面图"/></a><div class="content"><a class="title" href="/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/" title="辽宁大学崇山校区WEB互动平面图">辽宁大学崇山校区WEB互动平面图</a><time datetime="2023-08-02T06:27:48.000Z" title="发表于 2023-08-02 14:27:48">2023-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/" title="第三版个人博客正式上线"><img src="http://djyy24.github.io/imgs/blog3.png" onerror="this.onerror=null;this.src='/djyy24/img/404.jpg'" alt="第三版个人博客正式上线"/></a><div class="content"><a class="title" href="/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/" title="第三版个人博客正式上线">第三版个人博客正式上线</a><time datetime="2023-08-02T04:01:21.000Z" title="发表于 2023-08-02 12:01:21">2023-08-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Minecraft相思故|对江邀月24</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/djyy24/js/utils.js"></script><script src="/djyy24/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/djyy24/js/search/local-search.js"></script></div></div></body></html>
