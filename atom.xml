@@ -6,7 +6,7 @@
   <link href="https://djyy24.github.io/djyy24/atom.xml" rel="self"/>
   
   <link href="https://djyy24.github.io/djyy24/"/>
-  <updated>2023-08-03T13:13:18.297Z</updated>
+  <updated>2023-08-06T04:52:46.186Z</updated>
   <id>https://djyy24.github.io/djyy24/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机组成原理04-指令系统</title>
+    <link href="https://djyy24.github.io/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</id>
+    <published>2023-08-06T02:27:25.000Z</published>
+    <updated>2023-08-06T04:52:46.186Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>指令</strong>：指示计算机执行某种操作的命令，是计算机运行的最小单位。一台计算机的所有指令的集合构成该计算机的<strong>指令系统</strong>。也成为<strong>指令集</strong>。<br>eg:X86架构，ARM架构</p><h1 id="一-指令格式"><a href="#一-指令格式" class="headerlink" title="一.指令格式"></a>一.指令格式</h1><p>一条指令就是机器语言的一个语句，它是一组有意义的二进制代码<br>一条指令分为<strong>操作码</strong>和<strong>地址码</strong>两部分：</p><ul><li><strong>操作码（OP）</strong>：用户要干什么，做什么运算或者事情</li><li><strong>地址码（A）</strong>：要对谁进行操作，没有操作对象或者一个或者多个操作对象<br>一条指令为一个操作码和0~多个地址码。</li></ul><h2 id="按照地址码数量分类："><a href="#按照地址码数量分类：" class="headerlink" title="按照地址码数量分类："></a><strong>按照地址码数量分类：</strong></h2><p><strong>1.零地址指令</strong><br>格式：</p><blockquote><p><strong>OP</strong></p></blockquote><ul><li>无需操作数，例如空操作，停机，关中断等</li><li>堆栈计算机，两个操作数<strong>隐含在</strong>栈顶和次栈顶，把计算结果压入栈顶。（数据结构：后缀表达式）</li></ul><p><strong>2.一地址指令</strong><br>格式：</p><blockquote><p><strong>OP A1</strong></p></blockquote><p>（A1表示操作数的<strong>地址</strong>）<br>指令含义：OP(A1)-&gt;A1    </p><ul><li>只需要一个操作数的运算（取反，加1等运算）完成三次访存：取出指令-&gt;读取A1处的值-&gt;运算后把结果写在A1处</li><li>需要两个操作数，但是其中一个操作数隐含在某个寄存器（如ACC）中。完成2次访存：取出指令-&gt;读取A1并把运算结果存入ACC累加寄存器中。</li></ul><p><strong>3.二地址指令</strong><br>格式：</p><blockquote><p><strong>OP A1 A2</strong></p></blockquote><p>指令含义：(A1)OP(A2)-&gt;A1<br>用于两个数的算术运算及逻辑运算<br>四次访存：取出指令，读取A1，读取A2，结果写入A1</p><p><strong>4.三地址指令</strong><br>格式：</p><blockquote><p><strong>OP A1 A2 A3</strong></p></blockquote><p>指令含义：(A1)OP(A2)-&gt;A3<br>用于两个数的算术运算及逻辑运算<br>四次访存：取出指令，读取A1，读取A2，结果写入A3</p><p><strong>5.四地址指令</strong><br>格式：</p><blockquote><p><strong>OP A1 A2 A3 NEXT</strong><br>指令含义：(A1)OP(A2)-&gt;A3;NEXT&#x3D;下一条将要执行指令的地址<br>用于两个数的算术运算及逻辑运算<br>四次访存：取出指令，读取A1，读取A2，结果写入A3<br><strong>执行完指令后，将PC的值修改为NEXT的值</strong>，而不是把PC的值+1，便于跳着执行指令</p></blockquote><p><strong>若指令长度不变，则地址码数量越多，单个地址码寻址范围越小，寻址能力越差。</strong></p><h2 id="按照指令长度分类（看指令总长度）"><a href="#按照指令长度分类（看指令总长度）" class="headerlink" title="按照指令长度分类（看指令总长度）"></a><strong>按照指令长度分类</strong>（看指令总长度）</h2><ul><li>指令字长：一条指令的总长度</li><li>机器字长：CPU单次可处理二进制位数</li><li>存储字长：一个存储单元中的二进制代码位数（和MDR位数相同）<br>半字长指令，单字长指令，双字长指令中的字长为机器字长<br><strong>1.定长指令字结构</strong>：指令系统中所有指令长度相等<br><strong>2.定长指令字结构</strong>：指令系统中各种指令的长度不相等</li></ul><h2 id="按操作码长度分类（看指令中操作码的长度）"><a href="#按操作码长度分类（看指令中操作码的长度）" class="headerlink" title="按操作码长度分类（看指令中操作码的长度）"></a><strong>按操作码长度分类</strong>（看指令中操作码的长度）</h2><p><strong>1.定长操作码</strong>：指令系统中所有指令的操作码长度都相同<br><strong>2.可变长操作码</strong>：指令系统各个指令中的操作码长度可变</p><h2 id="按操作类型分类"><a href="#按操作类型分类" class="headerlink" title="按操作类型分类"></a><strong>按操作类型分类</strong></h2><p>1.数据传送<br>2.算术逻辑操作<br>3.移位操作<br>4.转移操作（改变PC的值）</p><h2 id="扩展操作码指令格式"><a href="#扩展操作码指令格式" class="headerlink" title="扩展操作码指令格式"></a><strong>扩展操作码指令格式</strong></h2><p><strong>扩展操作码</strong><br>例：指令字长为16位，4个地址码，每个地址码占4位。</p><ul><li><strong>三地址指令</strong>：4位操作码全部用于三地址指令：把第一个操作码中的1111保留，一共有15位三地址指令。<blockquote><p>OP A1 A2 A3</p></blockquote></li><li><strong>二地址指令</strong>：第1个地址码设置为1111表示这个是二地址指令，保留第二位地址码的1111（留作扩展操作码），一共15条<blockquote><p>1111 OP A1 A2</p></blockquote></li><li><strong>一地址指令</strong>：第1，2个地址码设置为1111表示这个是一地址指令，保留第三位地址码的1111，一共15条<blockquote><p>1111 1111 OP A1</p></blockquote></li><li><strong>零地址指令</strong>：前三个地址码都设置为1111，一共16条<blockquote><p>1111 1111 1111 OP<br>设计扩展操作码指令格式时，应该注意：<strong>以下两点</strong></p></blockquote></li><li>不允许短吗是长码的前缀，短操作码不能与长操作码的前边部分相同（所以要保留1111）</li><li>各指令的操作码一定不能重复<br>给使用频率较高的指令编更短的操作码，较少指令译码和分析的时间。<br>设地址长度为n，上一层留出m种状态，下一层可扩展出m×2^n种状态。<br>！<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/1.png">1</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;指令&lt;/strong&gt;：指示计算机执行某种操作的命令，是计算机运行的最小单位。一台计算机的所有指令的集合构成该计算机的&lt;strong&gt;指令系统&lt;/strong&gt;。也成为&lt;strong&gt;指令集&lt;/strong&gt;。&lt;br&gt;eg:X86架构，ARM架构&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://djyy24.github.io/djyy24/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机组成原理" scheme="https://djyy24.github.io/djyy24/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>【刘宇二创】还原《AYO》舞蹈背景中的白色小楼</title>
