@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>对江邀月Minecraft皮肤站</title>
+      <link href="/djyy24/2023/08/17/%E5%AF%B9%E6%B1%9F%E9%82%80%E6%9C%88Minecraft%E7%9A%AE%E8%82%A4%E7%AB%99/"/>
+      <url>/djyy24/2023/08/17/%E5%AF%B9%E6%B1%9F%E9%82%80%E6%9C%88Minecraft%E7%9A%AE%E8%82%A4%E7%AB%99/</url>
+      
+        <content type="html"><![CDATA[<p>基于Blessing Skin Server开源框架的皮肤站，支持启动器外置登录。<br><img src="https://img1.imgtp.com/2023/08/17/sOVLjTqH.png"><br>服务器网址：<a href="http://8.141.83.100:93/">http://8.141.83.100:93</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Minecraft </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Minecraft </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java面试相关</title>
+      <link href="/djyy24/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
+      <url>/djyy24/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机组成原理04-指令系统</title>
       <link href="/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"/>
       <url>/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</url>
@@ -95,7 +133,7 @@
       <link href="/djyy24/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/"/>
       <url>/djyy24/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/</url>
       
-        <content type="html"><![CDATA[<p>因为Markdown格式可以和HTML，JavaScript混编，所以就做了一个博客页专门放各种网页端小工具<br>计算器：</p><div style="width:200px;height:212px;background:#8dbcf4">    <input id="screen" style="height:24.5px;margin:15px;margin-right: 0px;width:140px">    <button style="border: solid 1px;background: #ffffff;width:21px;height:24px;padding: 3px;margin: 0px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value=''">C</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'7'">7</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'8'">8</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'9'">9</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=1;a=Number(document.getElementById('screen').value);document.getElementById('screen').value=''">+</button><br>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'4'">4</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'5'">5</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'6'">6</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=2;a=Number(document.getElementById('screen').value);document.getElementById('screen').value=''">-</button><br>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'1'">1</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'2'">2</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'3'">3</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=3;a=Number(document.getElementById('screen').value);document.getElementById('screen').value='';">x</button><br>    <button style="background: #ff0000;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="calculate()">=</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'0'">0</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'.'">.</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=4;a=Number(document.getElementById('screen').value);document.getElementById('screen').value='';console.log(a)">/</button>    <script>        var mod=0;        var a;        function calculate()        {            let b;            b=Number(document.getElementById("screen").value);            console.log(a,b);            if(mod==1)            {                document.getElementById("screen").value=a+b;            }            if(mod==2)            {                document.getElementById("screen").value=a-b;            }            if(mod==3)            {                document.getElementById("screen").value=a*b;            }            if(mod==4)            {                document.getElementById("screen").value=a/b;            }        }    </script></div>]]></content>
+        <content type="html"><![CDATA[<p>因为Markdown格式可以和HTML，JavaScript混编，所以就做了一个博客页专门放各种网页端小工具<br>计算器：</p><div style="width:200px;height:212px;background:#8dbcf4">    <input id="screen" style="height:24.5px;margin:15px;margin-right: 0px;width:140px">    <button style="border: solid 1px;background: #ffffff;width:21px;height:24px;padding: 3px;margin: 0px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value=''">C</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'7'">7</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'8'">8</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'9'">9</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=1;a=Number(document.getElementById('screen').value);document.getElementById('screen').value=''">+</button><br>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'4'">4</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'5'">5</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'6'">6</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=2;a=Number(document.getElementById('screen').value);document.getElementById('screen').value=''">-</button><br>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'1'">1</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'2'">2</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'3'">3</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=3;a=Number(document.getElementById('screen').value);document.getElementById('screen').value='';">x</button><br>    <button style="background: #ff0000;width:24px;height:24px;padding: 3px;margin: 6px;margin-left: 25px;" onclick="calculate()">=</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'0'">0</button>    <button style="background: #ffffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'.'">.</button>    <button style="background: #3fffff;width:24px;height:24px;padding: 3px;margin: 6px;" onclick="mod=4;a=Number(document.getElementById('screen').value);document.getElementById('screen').value='';console.log(a)">/</button>    <script>        var mod=0;        var a;        function calculate()        {            let b;            b=Number(document.getElementById("screen").value);            console.log(a,b);            if(mod==1)            {                document.getElementById("screen").value=a+b;            }            if(mod==2)            {                document.getElementById("screen").value=a-b;            }            if(mod==3)            {                document.getElementById("screen").value=a*b;            }            if(mod==4)            {                document.getElementById("screen").value=a/b;            }        }        function func(){    var days=[0,31,29,31,30,31,30,31,31,30,31,30,31]    var m=document.getElementById("yue").value;    var d=document.getElementById("ri").value;    if(m>12||m<1||d>days[m]||d<1)        {document.getElementById("jieguo").value="日期数值超出范围";    return;}    var y=1910;    if(d==13&&m==12)    {document.getElementById("jieguo").value="--";    return;}    if(m==12&&d>13)        {            d=d-1;        }if(d==31)        y=y+10+(m-1)*10;    else        y=y+(m-1)*10+parseInt((d-1)/3)+1;    console.log(y);    if(y>2020)        y=y-120;    document.getElementById("jieguo").value=y;}function func2(){    var y=document.getElementById("y").value;    if(y<1901||y>2021)        {document.getElementById("jieguo2").value="年数超出范围（1901--2020）";    return;}    if(y>1900&&y<1911)        {            let str="12月";            let dd=(y-1900)*3-2;            if(dd>=13)                dd++;            str=str+dd+"日（第一天）";            document.getElementById("jieguo2").value=str;            return;        }    var y2=y-1910-1;    var m=1+parseInt(y2/10)    var d=y2%10*3+1    var str=m+"月"+d+"日（第一天）";    document.getElementById("jieguo2").value=str;}    </script></div><hr><div style="width: 600px;height: 320px;border: solid 2px;"><strong>月日转年：</strong><br>    请输入月：<input id="yue">    请输入日：<input id="ri"> <span onclick="func()" style="color: blue;"> 确 认 </span>    <br><br>计算结果： <input id="jieguo"><hr><strong>年转月日：</strong><br>    <body>    请输入年：<input id="y"> <span onclick="func2() " style="color: blue;"> 确 认 </span>    <br><br>计算结果： <input id="jieguo2"></body></div>]]></content>
       
       
       <categories>
@@ -216,7 +254,7 @@
       
       <categories>
           
-          <category> MC建筑 </category>
+          <category> Minecraft </category>
           
       </categories>
       
@@ -319,7 +357,7 @@
       <link href="/djyy24/2023/08/02/%E5%85%B3%E4%BA%8E%E2%80%9CMinecraft%E7%9B%B8%E6%80%9D%E6%95%85%E2%80%9D/"/>
       <url>/djyy24/2023/08/02/%E5%85%B3%E4%BA%8E%E2%80%9CMinecraft%E7%9B%B8%E6%80%9D%E6%95%85%E2%80%9D/</url>
       
-        <content type="html"><![CDATA[<p>基本属性：IT技术，手作爱好者，摄影街拍，Minecraft建筑，二次元，汉文化，历史<br>（基本属性仅包括在互联网社区公开的部分）<br>考虑到人身安全性，三次元的属性与信息不予公开，互联网身份与现实身份不直接关联。<br>2021年8月12日开通B站账号“Minecraft相思故”，发布Minecraft与手工制作方面的视频<br>2021年10月开始互联网社交，建立了较完善的互联网社交体系<br>2022年9月开启现实中的社交，认识了很多同好</p><p>【关于手作】<br>2006年10月入坑手作，以纸艺为主<br>2011年7月制作首个建筑模型<br>2022年3月开始在自媒体平台更新手作内容<br>2022年5月首次参与校园艺术节，投稿辽大校门模型<br>2022年9月首次参加手作活动<br>2022年6月开始制作更多种类的手作<br>2023年1月学习制作发簪等汉服配饰</p><p>【关于Minecraft】<br>2016年1月入坑Minecraft（入坑版本1.3.1）<br>2021年3月开始还原各式老建筑<br>2021年8月制作相关剪辑视频<br>2023年2月开始学习模组开发<br>2023年2月末，B站投稿视频首次破万<br>2023年5月开始制作车站，机场，医院等更多种类的建筑<br>2023年7月上旬，B站粉丝数量突破1000</p><p>其他圈子概况暂不公开。<br>（更新于2023年8月3日）</p>]]></content>
+        <content type="html"><![CDATA[<p>基本属性：IT技术，手作爱好者，摄影街拍，Minecraft建筑，二次元，汉文化，历史<br>（基本属性仅包括在互联网社区公开的部分）<br>考虑到人身安全性，三次元的属性与信息不予公开，互联网身份与现实身份不直接关联。<br>2021年8月12日开通B站账号“Minecraft相思故”，发布Minecraft与手工制作方面的视频<br>2021年10月开始互联网社交，建立了较完善的互联网社交体系<br>2022年9月开启现实中的社交，认识了很多同好</p><p>【关于手作】<br>2006年10月入坑手作，以纸艺为主<br>2011年7月制作首个建筑模型<br>2022年3月开始在自媒体平台更新手作内容<br>2022年5月首次参与校园艺术节，投稿辽大校门模型<br>2022年9月首次参加手作活动<br>2022年6月开始制作更多种类的手作<br>2023年1月学习制作发簪等汉服配饰</p><p>【关于Minecraft】<br>2016年1月入坑Minecraft（入坑版本1.3.1）<br>2021年3月开始还原各式老建筑<br>2021年8月制作相关剪辑视频<br>2023年2月开始学习模组开发<br>2023年2月末，B站投稿视频首次破万<br>2023年5月开始制作车站，机场，医院等更多种类的建筑<br>2023年7月上旬，B站粉丝数量突破1000<br>2023年8月10日，对江邀月皮肤站正式上线<br>2023年8月11日，首个服务器开服</p><p>其他圈子概况暂不公开。<br>（更新于2023年8月3日）</p>]]></content>
       
       
       <categories>
