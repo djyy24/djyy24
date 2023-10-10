@@ -6,7 +6,7 @@
   <link href="https://djyy24.github.io/djyy24/atom.xml" rel="self"/>
   
   <link href="https://djyy24.github.io/djyy24/"/>
-  <updated>2023-10-10T15:07:35.145Z</updated>
+  <updated>2023-10-10T15:42:00.159Z</updated>
   <id>https://djyy24.github.io/djyy24/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/"/>
     <id>https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/</id>
     <published>2023-10-10T14:32:54.000Z</published>
-    <updated>2023-10-10T15:07:35.145Z</updated>
+    <updated>2023-10-10T15:42:00.159Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>索引的概念</strong><br>索引是对数据库表中一个或多个列的值进行排序的结构，有助于快速查找信息（类似于书的目录）<br>索引的优点：加快查询速度；创建唯一性索引，保证数据库每一行数据的唯一性；加速表和表的连接；在使用分组和排序子句进行检索时，显著减少查询中分组排序的时间。<br>缺点：占用表之外的物理空间；需要花费时间创建与维护；表进行更新操作时，索引需要被重建。<br>类型：哈希表，有序数组和搜索树<br>覆盖索引可以减少树的搜索次数，显著提升查询性能，可以使用覆盖索引进行性能优化。</p><p><strong>索引失效的情况</strong><br>1.查询条件中有or，即使有部分条件带索引也会失效<br>2.like查询是以%开头<br>3.如果列类型是字符串，那在查询条件中需要将数据用引号引起来，否则不走索引<br>4.索引列中参与计算会导致索引失效<br>5.违背最左匹配原则<br>6.如果MySQL估计全表扫描要比使用索引要快，会不适用索引</p><p><strong>Redis六种淘汰策略</strong><br>1.noeviction(default)：对于写请求不再提供服务，直接返回错误（DEL请求部分特殊请求除外）<br>2.allkeys-LRU：从所有key中使用LRU算法进行淘汰（LRU：最近最少使用算法）<br>3.volatile-LRU：从设置了过期时间的Key中使用LRU算法进行淘汰<br>4.allkeys-random：从所有key中随即淘汰数据<br>5.volatile-random：从设置了过期时间的key中淘汰<br>6.volatile-ttl：在设置了过期时间的key中，淘汰过期时间剩余最短的<br>当使用volatile-lru，volatile-random，volatile这三种策略时，如果没有key可以淘汰，则和noeviction一样返回错误</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>索引的概念</strong><br>索引是对数据库表中一个或多个列的值进行排序的结构，有助于快速查找信息（类似于书的目录）<br>索引的优点：加快查询速度；创建唯一性索引，保证数据库每一行数据的唯一性；加速表和表的连接；在使用分组和排序子句进行检索时，显著减少查询中分组排序的时间。<br>缺点：占用表之外的物理空间；需要花费时间创建与维护；表进行更新操作时，索引需要被重建。<br>类型：哈希表，有序数组和搜索树<br>覆盖索引可以减少树的搜索次数，显著提升查询性能，可以使用覆盖索引进行性能优化。</p><p><strong>索引失效的情况</strong><br>1.查询条件中有or，即使有部分条件带索引也会失效<br>2.like查询是以%开头<br>3.如果列类型是字符串，那在查询条件中需要将数据用引号引起来，否则不走索引<br>4.索引列中参与计算会导致索引失效<br>5.违背最左匹配原则<br>6.如果MySQL估计全表扫描要比使用索引要快，会不适用索引</p><p><strong>Redis六种淘汰策略</strong><br>1.noeviction(default)：对于写请求不再提供服务，直接返回错误（DEL请求部分特殊请求除外）<br>2.allkeys-LRU：从所有key中使用LRU算法进行淘汰（LRU：最近最少使用算法）<br>3.volatile-LRU：从设置了过期时间的Key中使用LRU算法进行淘汰<br>4.allkeys-random：从所有key中随即淘汰数据<br>5.volatile-random：从设置了过期时间的key中淘汰<br>6.volatile-ttl：在设置了过期时间的key中，淘汰过期时间剩余最短的<br>当使用volatile-lru，volatile-random，volatile这三种策略时，如果没有key可以淘汰，则和noeviction一样返回错误</p><p><strong>索引的基本原理</strong><br>索引用来快速寻找具有特定值得记录，如果没有索引，一般来说会对整张表进行遍历。<br>索引的原理：把无顺序的数据变成有序的查询<br>1.把创建了索引的列的内容进行排序<br>2.对排序的结果生成倒排表<br>3.在倒排表内容上拼上数据地址链<br>4.在查询的时候，先拿到倒排表的内容，再取出数据地址链，从而拿到具体数据</p><p><strong>MySQL聚簇</strong></p>]]></content>
     
     
       
