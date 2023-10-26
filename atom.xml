@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Minecraft相思故的个人博客</title>
+  <title>对江邀月的个人博客</title>
   
   <subtitle>对江邀月24</subtitle>
   <link href="https://djyy24.github.io/djyy24/atom.xml" rel="self"/>
   
   <link href="https://djyy24.github.io/djyy24/"/>
-  <updated>2023-10-10T16:10:44.233Z</updated>
+  <updated>2023-10-12T06:35:03.645Z</updated>
   <id>https://djyy24.github.io/djyy24/</id>
   
   <author>
-    <name>Minecraft相思故|对江邀月24</name>
+    <name>对江邀月24</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数据库相关</title>
+    <title>数据库八股文</title>
     <link href="https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/"/>
     <id>https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/</id>
     <published>2023-10-10T14:32:54.000Z</published>
-    <updated>2023-10-10T16:10:44.233Z</updated>
+    <updated>2023-10-12T06:35:03.645Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>索引的概念</strong><br>索引是对数据库表中一个或多个列的值进行排序的结构，有助于快速查找信息（类似于书的目录）<br>索引的优点：加快查询速度；创建唯一性索引，保证数据库每一行数据的唯一性；加速表和表的连接；在使用分组和排序子句进行检索时，显著减少查询中分组排序的时间。<br>缺点：占用表之外的物理空间；需要花费时间创建与维护；表进行更新操作时，索引需要被重建。<br>类型：哈希表，有序数组和搜索树<br>覆盖索引可以减少树的搜索次数，显著提升查询性能，可以使用覆盖索引进行性能优化。</p><p><strong>索引失效的情况</strong><br>1.查询条件中有or，即使有部分条件带索引也会失效<br>2.like查询是以%开头<br>3.如果列类型是字符串，那在查询条件中需要将数据用引号引起来，否则不走索引<br>4.索引列中参与计算会导致索引失效<br>5.违背最左匹配原则<br>6.如果MySQL估计全表扫描要比使用索引要快，会不适用索引</p><p><strong>Redis六种淘汰策略</strong><br>1.noeviction(default)：对于写请求不再提供服务，直接返回错误（DEL请求部分特殊请求除外）<br>2.allkeys-LRU：从所有key中使用LRU算法进行淘汰（LRU：最近最少使用算法）<br>3.volatile-LRU：从设置了过期时间的Key中使用LRU算法进行淘汰<br>4.allkeys-random：从所有key中随即淘汰数据<br>5.volatile-random：从设置了过期时间的key中淘汰<br>6.volatile-ttl：在设置了过期时间的key中，淘汰过期时间剩余最短的<br>当使用volatile-lru，volatile-random，volatile这三种策略时，如果没有key可以淘汰，则和noeviction一样返回错误</p><p><strong>索引的基本原理</strong><br>索引用来快速寻找具有特定值得记录，如果没有索引，一般来说会对整张表进行遍历。<br>索引的原理：把无顺序的数据变成有序的查询<br>1.把创建了索引的列的内容进行排序<br>2.对排序的结果生成倒排表<br>3.在倒排表内容上拼上数据地址链<br>4.在查询的时候，先拿到倒排表的内容，再取出数据地址链，从而拿到具体数据</p><p><strong>MySQL聚簇</strong></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="数据库的三大范式"><a href="#数据库的三大范式" class="headerlink" title="数据库的三大范式"></a>数据库的三大范式</h1><p>1.字段不可再拆分，保证了原子性<br>2.表中任意一个主键或任意一组联合主键都可以确定所有非主键值<br>3.在第二范式的前提下，不存在某非主键字段A可以获取非主键字段B的情况，消除传递依赖。</p><h1 id="索引的概念"><a href="#索引的概念" class="headerlink" title="索引的概念"></a>索引的概念</h1><p>索引是对数据库表中一个或多个列的值进行排序的结构，有助于快速查找信息（类似于书的目录）<br><strong>索引的优点：</strong>加快查询速度；创建唯一性索引，保证数据库每一行数据的唯一性；加速表和表的连接；在使用分组和排序子句进行检索时，显著减少查询中分组排序的时间。<br><strong>缺点：</strong>占用表之外的物理空间；需要花费时间创建与维护；表进行更新操作时，索引需要被重建。<br><strong>类型：</strong>哈希表，有序数组和搜索树<br>覆盖索引可以减少树的搜索次数，显著提升查询性能，可以使用覆盖索引进行性能优化。</p><h1 id="索引失效的情况"><a href="#索引失效的情况" class="headerlink" title="索引失效的情况"></a>索引失效的情况</h1><p>1.查询条件中有or，即使有部分条件带索引也会失效<br>2.like查询是以%开头<br>3.如果列类型是字符串，那在查询条件中需要将数据用引号引起来，否则不走索引<br>4.索引列中参与计算会导致索引失效<br>5.违背最左匹配原则<br>6.如果MySQL估计全表扫描要比使用索引要快，会不适用索引</p><h1 id="Redis六种淘汰策略"><a href="#Redis六种淘汰策略" class="headerlink" title="Redis六种淘汰策略"></a>Redis六种淘汰策略</h1><p>1.noeviction(default)：对于写请求不再提供服务，直接返回错误（DEL请求部分特殊请求除外）<br>2.allkeys-LRU：从所有key中使用LRU算法进行淘汰（LRU：最近最少使用算法）<br>3.volatile-LRU：从设置了过期时间的Key中使用LRU算法进行淘汰<br>4.allkeys-random：从所有key中随即淘汰数据<br>5.volatile-random：从设置了过期时间的key中淘汰<br>6.volatile-ttl：在设置了过期时间的key中，淘汰过期时间剩余最短的<br>当使用volatile-lru，volatile-random，volatile这三种策略时，如果没有key可以淘汰，则和noeviction一样返回错误</p><h1 id="索引的基本原理"><a href="#索引的基本原理" class="headerlink" title="索引的基本原理"></a>索引的基本原理</h1><p>索引用来快速寻找具有特定值得记录，如果没有索引，一般来说会对整张表进行遍历。<br>索引的原理：把无顺序的数据变成有序的查询<br>1.把创建了索引的列的内容进行排序<br>2.对排序的结果生成倒排表<br>3.在倒排表内容上拼上数据地址链<br>4.在查询的时候，先拿到倒排表的内容，再取出数据地址链，从而拿到具体数据</p><h1 id="MySQL聚簇索引"><a href="#MySQL聚簇索引" class="headerlink" title="MySQL聚簇索引"></a>MySQL聚簇索引</h1><p><strong>聚簇索引：</strong>将数据存储和索引放到一起并且按照一定顺序组织，找到索引也就找到了数据，数据的物理处存放顺序和索引数据顺序一致。只要索引是相邻的，那么对应的数据也一定相邻存储在磁盘上。<br><strong>非聚簇索引：</strong>叶子结点不存放数据，存储的是数据行地址，也就是说根据索引查找数据行的位置再去磁盘查找数据，类似于书的目录。<br><strong>聚簇索引的优势：</strong><br>1 直接引用数据，无需二次查询。<br>2 范围查询效率高，因为其数据按照大小排列的。<br>3 聚簇索引更适合排序场合<br><strong>聚簇索引的劣势：</strong><br>1 维护昂贵，特别是插入新行或者主键被更新导致分页的时候。建议在大量插入新行后，选择负载较低的时间段，通过optimize table优化表，使用独享表空间弱化碎片。<br>2 表因为使用UUID作为主键导致数据存储稀疏，这就会出现聚簇索引可能比全盘扫描更慢。因此主键建议使用自增<br>3 如果主键比较大的话，会导致主键值很大，辅助索引也将会变得更大，导致非叶子节点占据更多的物理空间</p><h1 id="Mysql索引的数据结构，优势劣势"><a href="#Mysql索引的数据结构，优势劣势" class="headerlink" title="Mysql索引的数据结构，优势劣势"></a>Mysql索引的数据结构，优势劣势</h1><p>主要有Hash索引，B+树索引等，B+树时InnoDB引擎的默认索引实现。<br><strong>B+树：</strong>一种平衡二叉树，从根节点到每个叶子节点的高度差不超过1，同层级节点之间有指针链接。B+树上进行常规搜索从根节点到叶子节点的搜索效率相当，不会出现大幅波动。在使用基于索引的顺序扫描时，也可以利用双向指针快速左右移动，效率非常高。<br><strong>哈希索引：</strong>哈希索引就是采用哈希算法把键值换算为哈希值。只需一次哈希算法就可以找到相应位置。在等值查询中占有较大的速度优势。但无法用于范围查询与模糊查询。InnoDB引擎不支持哈希索引。</p><h1 id="索引的设计原则"><a href="#索引的设计原则" class="headerlink" title="索引的设计原则"></a>索引的设计原则</h1><p>主要原则：查询速度快，占用空间小。<br>1.适合索引的列时出现在Where子句中的列，或者连接子句中指定的列<br>2.基数较小的表不适合建立索引<br>3.使用短索引，如果索引字段较长，应该指定一个前缀长度节省存储空间。搜索词超过前缀则在筛选前缀之后继续向后比较。<br>4.只需保持利于查询的索引，不要过度使用索引，以免占用过多的内存以及更新索引时消耗较多的性能。<br>5.定义有外键的数据一定建立索引。<br>6.更新频繁的字段不适合创建索引，防止索引更新消耗资源。<br>7.不能有效区分数据的列（选项列，值域很小的列）不适合做索引<br>8.尽量扩展已有索引，而不是新建索引。<br>9.对于那些查询中很少涉及的列，重复值比较多的列不要建立索引。<br>10.定义为text，image，bit这三种数据类型的字段不要建立索引</p><h1 id="InnoDB存储引擎的锁的算法"><a href="#InnoDB存储引擎的锁的算法" class="headerlink" title="InnoDB存储引擎的锁的算法"></a>InnoDB存储引擎的锁的算法</h1><p><strong>Record lock：</strong>单个行记录上的锁，行级锁<br><strong>Gap lock：</strong>间隙锁，目的是阻止多个事务将记录插入到同一范围内，但是会发生幻读。两种方式关闭gap锁：将事务隔离级别设置为RC；将参数innodb_locks_unsafe_for_binlog设置为1<br><strong>Next-key lock：</strong>行级锁＋间隙锁，锁定一个范围，包含记录本身，常用于行的查询，解决了Phantom Problem幻读问题</p><h1 id="幻读，脏读，不可重复读"><a href="#幻读，脏读，不可重复读" class="headerlink" title="幻读，脏读，不可重复读"></a>幻读，脏读，不可重复读</h1><p><strong>幻读：</strong>事务A按照一定条件进行数据读取，期间事务B插入了相同条件的新数据，事务A再次按照原先条件进行读取时，发现了事务B新插入的数据，这种情况称为幻读<br><strong>脏读：</strong>某个事务已更新一部分数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个回滚了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读：</strong>在一个事务的两次查询中数据不一致，这可能是两次查询过程中间插入了一个十五更新的原有的数据</p><h1 id="事务的基本特性"><a href="#事务的基本特性" class="headerlink" title="事务的基本特性"></a>事务的基本特性</h1><p>-ACID特性：<br><strong>A原子性：</strong>一个事务中的操作要么全成功，要么全部失败。<br><strong>C一致性：</strong>数据库总是从一个一致性的状态转换到另一个一致性的状态<br><strong>I隔离性：</strong>指的是一个事物的修改过程，在最终提交之前，对其他事务都是不可见的。<br><strong>D持久性：</strong>指的是一旦事务提交，所作的修改就会永久保存到数据库中。<br>-ACID特性的保证<br>1.原子性由undo log日志保证，它记录了需要回滚的信息，可以撤销已执行操作<br>2.一致性由原子性，隔离性，持久性共同决定，程序代码要保证业务上的一致性<br>3.隔离性由MVCC保证<br>4.持久性由内存+redo log保证，MySQL修改数据的同时在内存和redo<br>log记录这次操作，宕机的时候可以从redo </p><h1 id="什么是MVCC"><a href="#什么是MVCC" class="headerlink" title="什么是MVCC"></a>什么是MVCC</h1><p>MVCC：多版本并发控制，读取数据时通过一种类似快照的方式将数据保存下来，这样读锁和写锁就不冲突了。不同的事务session会看到自己特定版本的数据，版本链只在READ COMMITTED和REPEATABLE READ两个隔离级别下工作。其他两个隔离级别和MVCC不兼容，因为READ UNCOMMITTED总是读取到最新的数据行，而不是符合当前事务版本的数据行。而SERIALIZABLE则会对所有读取的行加锁。</p><h1 id="分表"><a href="#分表" class="headerlink" title="分表"></a>分表</h1><p><strong>1.垂直分表</strong><br>表中的字段比较多，一般将不常用的或者数据较大的字段拆分到扩展表。<br><strong>2.水平分表</strong><br>单表的数据量太大，按照RANGE，Hash取模等规则把一张表切分成多张表，但是这些表仍然在同一库中</p><h1 id="分库"><a href="#分库" class="headerlink" title="分库"></a>分库</h1><p><strong>1.水平分库</strong>单张表的数据库切分后放到多个服务器上去，有效缓解单机和单库的性能瓶颈和压力，突破IO，连接数，硬件资源等瓶颈。<br><strong>2.垂直分库</strong><br>数据库的表太多，把一些表放到其他数据库&#x2F;服务器上。</p><h1 id="分表后非sharding——key的查询怎末处理"><a href="#分表后非sharding——key的查询怎末处理" class="headerlink" title="分表后非sharding——key的查询怎末处理"></a>分表后非sharding——key的查询怎末处理</h1><p>1.做一个映射关系mapping表，保存两表主键之间的关系，查询时先通过一个表查询另一个表，再通过主键去查询。<br>2.宽表，对数据实时性要求不是很高的场景，比如查询订单列表，可以把订单数据同步到离线数仓，基于数仓做张宽表，再基于其他如es提供查询服务。<br>3.数据量不是很大的话，比如后台的一些查询，也可以通过多线程扫表，然后再聚合，或者通过异步的方式。</p><h1 id="分表之后的排序"><a href="#分表之后的排序" class="headerlink" title="分表之后的排序"></a>分表之后的排序</h1><p>排序字段是唯一索引：<br>1.首先进行第一页的查询：合并各表的查询结果，然后再次排序<br>2.第二页之后的查询，需要传入上一页排序的字段最后一个值及排序方式<br>3.根据排序方式以及最后那个值进行查询。如排序字段是date，上一页的最后一个值时3，降序排序，则查询的时候的sql就是select … from table where date &lt;3 order by date desc limit 0,10；这样再把几个表的查询结果进行合并即可。</p><h1 id="MySQL主从同步的过程"><a href="#MySQL主从同步的过程" class="headerlink" title="MySQL主从同步的过程"></a>MySQL主从同步的过程</h1><p>主从复制中主要三个线程：master(logdump thread);slave(I&#x2F;O thread,SQL thread)<br>Master一条线程和slave的两条线程。<br>1.主节点binlog，主从复制的基础是主库记录数据库的所有变更记录到binlog。binlog是数据库服务器启动那一刻起，保存所有数据库变更内容的一个文件。<br>2.主节点logdump线程，当binlog有变动时，logdump线程读取其内容并发送给节点。<br>3.从节点io线程接收binlog内容并写到relay log中。<br>4.从节点的SQL线程读取relay log文件内容对数据更新进行重放，最终保证主从数据库一致。<br>注：主从节点使用binglog文件+position偏移量来定位主从同步的位置，从节点保存position，如果从节点宕机，则会自动从position处发起同步。</p><h1 id="Mysql的全同步复制和半同步复制"><a href="#Mysql的全同步复制和半同步复制" class="headerlink" title="Mysql的全同步复制和半同步复制"></a>Mysql的全同步复制和半同步复制</h1><p>由于MySQL默认的复制方式是异步的，主库把日志发送给从库后不关心从库是否已经处理，这样会产生一个问题就是假设主库挂了，从库处理失败了，这时候从库升为主库后日志就会丢失，因而采取全同步复制或者半同步复制<br><strong>全同步复制</strong><br>主库写入binlog后强制同步日志到从库，所有的从库都执行完后才返回给客户端<br><strong>半同步复制</strong><br>和全同步不同的是，半同步复制的逻辑是从库写入日志成功后返回ACK确认给主库，主库收到至少一个从库的确认就认为写操作完成。</p><h1 id="MyISAM和InnoDB的区别"><a href="#MyISAM和InnoDB的区别" class="headerlink" title="MyISAM和InnoDB的区别*"></a>MyISAM和InnoDB的区别*</h1><p><strong>MyISAM</strong><br>不支持事务，但是每次查询都是原子的<br>支持表级锁，每次操作都对整个表加锁<br>存储表的总行数不同<br>一个MyISAM表中包括三个文件：索引文件，表结构文件，数据文件<br>采用非聚集索引，索引文件的数据域存储指向数据文件的指针。辅索引与主索引基本一致，但是辅索引不用保证唯一性。<br><strong>InnoDB</strong><br>支持ACID事务，支持事务的四种隔离级别<br>支持行级锁及外键约束，支持写并发<br>不存储总行数<br>一个InnoDB引擎一般存储在一个文件空间中，也有可能为多个，受操作系统文件大小限制。<br>主键索引采用聚集索引，辅索引的数据域存储主键的值，因此从辅索引查找数据，需要先通过辅索引找到主键的值再访问辅索引。最好使用自增主键，防止插入数据时，为维持B+树的结构，文件大小的调整。</p><h1 id="Mysql中索引的类型"><a href="#Mysql中索引的类型" class="headerlink" title="Mysql中索引的类型"></a>Mysql中索引的类型</h1><p>1.普通索引：允许被索引的数据列包含重复值<br>2.唯一索引：可以保证数据记录的唯一性<br>3.主键：是一种特殊的唯一索引，在一张表中只能定义一个主键索引，主键用于唯一标识一条记录，使用关键字PRIMARY KEY来创建。<br>4.联合索引：索引可以覆盖多个数据列，如像INDEX(columnA,columnB)索引<br>5.全文索引：通过建立倒排索引，极大提升检索效率，解决字段是否包含的问题，是目前搜索引擎使用的一种关键技术。可以通过ALTER TABLE tablename ADD FULLTEXT(column);创建全文索引。</p><h1 id="索引对数据库性能的影响"><a href="#索引对数据库性能的影响" class="headerlink" title="索引对数据库性能的影响"></a>索引对数据库性能的影响</h1><p>索引可以极大地提高数据查询速度，通过使用索引，可以在查询的过程中，使用优化隐藏器，提高系统查询性能，但是会降低增删改的性能（涉及到更新索引）<br>索引占据物理空间。聚簇索引占据的空间更大，而且改变时索引更新代价很大。</p><h1 id="Explain分析语句"><a href="#Explain分析语句" class="headerlink" title="Explain分析语句"></a>Explain分析语句</h1><p>通过explain语句的分析，可以了解查询语句的执行情况，找出查询语句执行的瓶颈，从而优化查询语句。<br>explain语句基本语法：<br><strong>explain [EXTENDED] select * from table where name &#x3D; “…”</strong><br>explain查询后的字段：<br>id：select识别符，id越大优先级越高<br>select_type：select关键字对应的查询类型<br>table：表表名<br>partitions匹配的分区信息<br>type：单表查询方式（全表扫描&#x2F;索引）<br>possible_keys：可能用到的索引<br>key：实际上遇到的索引<br>key_len：实际用的索引长度<br>ref：使用索引时，与索引列进行等值匹配的对象信息<br>rows：预估的需要读取的记录条数<br>filtered：某个表经过搜索条件过滤后剩余记录条数的百分比<br>Extra：一些额外的信息，比如排序等</p><h1 id="索引覆盖"><a href="#索引覆盖" class="headerlink" title="索引覆盖"></a>索引覆盖</h1><p>索引覆盖是指一个SQL执行时，可以利用索引来快速查找，并且所要查找的字段包含在索引字段中，那么就直接返回索引中的值，不用回表。</p><h1 id="最左前缀原则"><a href="#最左前缀原则" class="headerlink" title="最左前缀原则"></a>最左前缀原则</h1><p>当一个SQL想要利用索引，就一定要提供该索引所对应的字段中最左边的字段，也就是排在前面的字段。比如针对a，b，c三个字段建立一个联合索引，那麽再写一个SQL时就一定要提供a字段的条件，这样才能用到联合索引。因为索引在创建时是按照先后以a,b,c从左到右来进行排序的，所以如果想要利用B+树快速查找也需要符合这个规则。</p><h1 id="InnoDB如何实现事务"><a href="#InnoDB如何实现事务" class="headerlink" title="InnoDB如何实现事务"></a>InnoDB如何实现事务</h1><p>InnoDB通过Buffer Pool，log Buffer，Redo log实现事务。以一个Update语句为例：<br>1.InnoDB接收到Update，先找到数据所在的页并缓存在BufferPool中<br>2.执行Update，修改BufferPool中的数据，也就是内存中的数据<br>3.针对Update语句生成一个RedoLog对象，并存入LogBuffer中<br>4.针对Update语句生成undoLog，用于回滚<br>5.如果事务提交就把RedoLog持久化，后续还有其他的机制将Buffer Pool中所修改的数据页持久化到磁盘中<br>6.如果事务回滚，则使用undoLog</p><h1 id="MySQL有几种锁？"><a href="#MySQL有几种锁？" class="headerlink" title="MySQL有几种锁？"></a>MySQL有几种锁？</h1><p>按照锁的粒度划分：行级锁，表级锁，页级锁，间隙锁<br>按照锁的共享策略划分：共享锁，排他锁，意向共享锁，意向排他锁<br>加锁策略上划分：乐观锁和悲观锁<br>其他：自增锁</p><h1 id="Redis为什么比较快呢？"><a href="#Redis为什么比较快呢？" class="headerlink" title="Redis为什么比较快呢？"></a>Redis为什么比较快呢？</h1><p>1.Redis是纯内存操作：数据存放在内存，响应速度快<br>2.Redis为非阻塞输入输出，采用epoll作为io多路复用技术的实现，再加上自身的事件处理模型将epoll中的连接，读写，关闭都转换为了时间，不在io上浪费过多的时间。<br>3.单线程，避免了线程切换与竞争态产生的消耗。</p><h1 id="SQL优化有哪些方式？"><a href="#SQL优化有哪些方式？" class="headerlink" title="SQL优化有哪些方式？"></a>SQL优化有哪些方式？</h1><p>1.检查是否使用了索引，没有则使用索引<br>2.检查所使用索引是否为最优，优化索引<br>3.检查所查询的字段是否有多余的，去掉sql中多余的字段<br>4.检查表中数据是否过多，是否应该进行分库分表<br>5.检查数据库实例所在的机器的性能配置是否太低并考虑增加资源</p><h1 id="B树和B-树的区别"><a href="#B树和B-树的区别" class="headerlink" title="B树和B+树的区别"></a>B树和B+树的区别</h1><p>B树：节点排序，一个节点可以存多个元素，多个元素也会排序<br>B+树：在B树特点的基础上，叶子节点之间有了指针，非叶子节点上的元素在叶子节点上冗余，叶子节点存储了所有元素，并且排好顺序。<br>MySQL索引使用B+树，一个节点存储多个元素使得B+树的高度较低。一个InnODB页就是一个B+树节点，一个InnoDB页默认16KB，所以一般情况下两层的B+树可以存两千万行数据，而且B+树叶子节点已经排序，通过叶子节点之间的指针就可以进行全表扫描与范围查找等。</p><h1 id="truncat和delete的区别"><a href="#truncat和delete的区别" class="headerlink" title="truncat和delete的区别"></a>truncat和delete的区别</h1><p>truncat属于数据定义语言，delete属于数据操作语言。Truncate只能删除表中的数据，无法用在视图上。Delete可以用在表中也可以用在视图。Truncate不能使用where关键字进行选择性删除。Truncate删除缓存不涉及缓存事务处理，delete会涉及到回退，提交，撤退处理。</p><h1 id="左连接，右连接，内连接"><a href="#左连接，右连接，内连接" class="headerlink" title="左连接，右连接，内连接"></a>左连接，右连接，内连接</h1><p>左连接：以左表为基础，根据两张表的条件将两表连接起来结果会将左表所有查询信息列出，右表只显示出ON后条件满足左表的部分。右连接反之。<br>内连接：查询两张表的子集并列出字段，查询结果中只有两个表共有的数据。</p><h1 id="MySQL是怎么解析一条SQL语句的"><a href="#MySQL是怎么解析一条SQL语句的" class="headerlink" title="MySQL是怎么解析一条SQL语句的"></a>MySQL是怎么解析一条SQL语句的</h1><p>查询语句：权限校验-&gt;查询缓存（8.0以前）-&gt;分析器-&gt;优化器-&gt;权限校验-&gt;执行器-&gt;引擎<br>更新语句：分析器-&gt;权限校验-&gt;执行器-&gt;引擎-&gt;redo log prepare-&gt;binlog-&gt;redo log commit</p><hr>参考自：图灵学院周瑜“Java210道面试题”；牛客网各企业面试经]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;索引的概念&lt;/strong&gt;&lt;br&gt;索引是对数据库表中一个或多个列的值进行排序的结构，有助于快速查找信息（类似于书的目录）&lt;br&gt;索引的优点：加快查询速度；创建唯一性索引，保证数据库每一行数据的唯一性；加速表和表的连接；在使用分组和排序子句进行检索时，显著减</summary>
+    <summary type="html">&lt;h1 id=&quot;数据库的三大范式&quot;&gt;&lt;a href=&quot;#数据库的三大范式&quot; class=&quot;headerlink&quot; title=&quot;数据库的三大范式&quot;&gt;&lt;/a&gt;数据库的三大范式&lt;/h1&gt;&lt;p&gt;1.字段不可再拆分，保证了原子性&lt;br&gt;2.表中任意一个主键或任意一组联合主键都可以确定所有</summary>
       
     
     
@@ -37,30 +37,6 @@
     
     
     <category term="数据库" scheme="https://djyy24.github.io/djyy24/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对江邀月Minecraft皮肤站</title>
-    <link href="https://djyy24.github.io/djyy24/2023/08/17/%E5%AF%B9%E6%B1%9F%E9%82%80%E6%9C%88Minecraft%E7%9A%AE%E8%82%A4%E7%AB%99/"/>
-    <id>https://djyy24.github.io/djyy24/2023/08/17/%E5%AF%B9%E6%B1%9F%E9%82%80%E6%9C%88Minecraft%E7%9A%AE%E8%82%A4%E7%AB%99/</id>
-    <published>2023-08-17T07:00:05.000Z</published>
-    <updated>2023-08-17T11:02:07.962Z</updated>
-    
-    <content type="html"><![CDATA[<p>基于Blessing Skin Server开源框架的皮肤站，支持启动器外置登录。<br><img src="https://img1.imgtp.com/2023/08/17/sOVLjTqH.png"><br>服务器网址：<a href="http://8.141.83.100:93/">http://8.141.83.100:93</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;基于Blessing Skin Server开源框架的皮肤站，支持启动器外置登录。&lt;br&gt;&lt;img src=&quot;https://img1.imgtp.com/2023/08/17/sOVLjTqH.png&quot;&gt;&lt;br&gt;服务器网址：&lt;a href=&quot;http://8.141.83</summary>
-      
-    
-    
-    
-    <category term="Minecraft" scheme="https://djyy24.github.io/djyy24/categories/Minecraft/"/>
-    
-    
-    <category term="Minecraft" scheme="https://djyy24.github.io/djyy24/tags/Minecraft/"/>
     
   </entry>
   
@@ -353,55 +329,6 @@
     <category term="JavaScript" scheme="https://djyy24.github.io/djyy24/tags/JavaScript/"/>
     
     <category term="HTML" scheme="https://djyy24.github.io/djyy24/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第三版个人博客正式上线</title>
-    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/"/>
-    <id>https://djyy24.github.io/djyy24/2023/08/02/%E7%AC%AC%E4%B8%89%E7%89%88%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF/</id>
-    <published>2023-08-02T04:01:21.000Z</published>
-    <updated>2023-08-02T13:23:04.694Z</updated>
-    
-    <content type="html"><![CDATA[<p>基于Hexo框架的第3版个人博客正式启用。<br>这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。</p><p>第一版个人博客：2023年4月6日制作，WEB前端开发刚开始的时候做的简单页面，作为临时页面使用。<br><img src="https://djyy24.github.io/imgs/blog1.png"><br><br>第二版个人博客：2023年6月21日制作，纯手写的HTML5＋JavaScript页面，参考一些官方网站的布局设计，加入了较多的图文信息，提供Minecraft资源等下载。<br><img src="https://djyy24.github.io/imgs/blog2.png"><br><br>第三版个人博客：2023年8月2日制作，使用Hexo框架以及改版的Butterfly主题，视觉效果较第二版有了较大提升。<br><img src="https://djyy24.github.io/imgs/blog3.png"><br><br>第三版告别了纯手打的HTML博客。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;基于Hexo框架的第3版个人博客正式启用。&lt;br&gt;这一版博客使用了Butterfly主题，相比于第二版视觉效果更好。&lt;/p&gt;
-&lt;p&gt;第一版个人博客：2023年4月6日制作，WEB前端开发刚开始的时候做的简单页面，作为临时页面使用。&lt;br&gt;&lt;img src=&quot;https://</summary>
-      
-    
-    
-    
-    <category term="日常分享" scheme="https://djyy24.github.io/djyy24/categories/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="基本信息" scheme="https://djyy24.github.io/djyy24/tags/%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于“Minecraft相思故”</title>
-    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E5%85%B3%E4%BA%8E%E2%80%9CMinecraft%E7%9B%B8%E6%80%9D%E6%95%85%E2%80%9D/"/>
-    <id>https://djyy24.github.io/djyy24/2023/08/02/%E5%85%B3%E4%BA%8E%E2%80%9CMinecraft%E7%9B%B8%E6%80%9D%E6%95%85%E2%80%9D/</id>
-    <published>2023-08-02T03:29:32.000Z</published>
-    <updated>2023-08-17T06:55:41.818Z</updated>
-    
-    <content type="html"><![CDATA[<p>基本属性：IT技术，手作爱好者，摄影街拍，Minecraft建筑，二次元，汉文化，历史<br>（基本属性仅包括在互联网社区公开的部分）<br>考虑到人身安全性，三次元的属性与信息不予公开，互联网身份与现实身份不直接关联。<br>2021年8月12日开通B站账号“Minecraft相思故”，发布Minecraft与手工制作方面的视频<br>2021年10月开始互联网社交，建立了较完善的互联网社交体系<br>2022年9月开启现实中的社交，认识了很多同好</p><p>【关于手作】<br>2006年10月入坑手作，以纸艺为主<br>2011年7月制作首个建筑模型<br>2022年3月开始在自媒体平台更新手作内容<br>2022年5月首次参与校园艺术节，投稿辽大校门模型<br>2022年9月首次参加手作活动<br>2022年6月开始制作更多种类的手作<br>2023年1月学习制作发簪等汉服配饰</p><p>【关于Minecraft】<br>2016年1月入坑Minecraft（入坑版本1.3.1）<br>2021年3月开始还原各式老建筑<br>2021年8月制作相关剪辑视频<br>2023年2月开始学习模组开发<br>2023年2月末，B站投稿视频首次破万<br>2023年5月开始制作车站，机场，医院等更多种类的建筑<br>2023年7月上旬，B站粉丝数量突破1000<br>2023年8月10日，对江邀月皮肤站正式上线<br>2023年8月11日，首个服务器开服</p><p>其他圈子概况暂不公开。<br>（更新于2023年8月3日）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;基本属性：IT技术，手作爱好者，摄影街拍，Minecraft建筑，二次元，汉文化，历史&lt;br&gt;（基本属性仅包括在互联网社区公开的部分）&lt;br&gt;考虑到人身安全性，三次元的属性与信息不予公开，互联网身份与现实身份不直接关联。&lt;br&gt;2021年8月12日开通B站账号“Minecr</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="https://djyy24.github.io/djyy24/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="基本信息" scheme="https://djyy24.github.io/djyy24/tags/%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/"/>
     
   </entry>
   
