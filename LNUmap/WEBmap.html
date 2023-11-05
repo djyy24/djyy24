@@ -1,0 +1,1814 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>辽宁大学崇山校区WEB地图</title>
+<link rel="shortcut icon"href="images/icon/favicon.ico">
+<style typr="text/css">
+	.father
+	{
+		position: relative;
+		width: 1200px;
+		height: 680px;
+		padding:0px;
+	}
+	.cssWind
+	{
+		position: absolute;
+		left:390px;
+		top:120px;
+		z-index:15;
+		width:750px;
+		height: 475px;
+		visibility:hidden;
+	}
+	.cssWindBG
+	{
+		position: absolute;
+left:0px;top:0px;
+		width: 1550px;
+		height: 733px;
+		background:rgba(0,0,0,0.4) ;
+		z-index: 14;
+		visibility: hidden;
+	}
+	.cssWinImgDiv
+	{
+		position:absolute;
+		left:52px;
+		top:35px;
+		z-index=16;
+		width:300px;
+		height:400px;
+		background:#ffffff ;
+	}
+	.cssWinImgDivBG
+	{
+		position:absolute;
+		left:48px;
+		top:31px;
+		z-index=15;
+		width:308px;
+		height:408px;
+		background:#ffffff ;
+	}
+	.cssWinInfDiv
+	{
+		position:absolute;
+		left:400px;
+		top:110px;
+		z-index=16;
+		width:355px;
+		height:255px;
+		overflow-y: scroll;
+		scrollbar-arrow-clolr:rgba(236,195,52);
+	}
+	.cssWinTitleDiv
+	{
+		position:absolute;
+		left:400px;
+		top:35px;
+		z-index=16;
+		width:330px;
+		height:50px;
+		font-family: '宋体';
+		font-size: 30px;
+		font-weight:bold;
+	}
+	.cssWinClose
+	{
+		position:absolute;
+		left:610px;
+		top:400px;
+		z-index=16;
+		width:140px;
+		height:35px;
+		background:rgba(236,195,52) ;
+	}
+	.cssWinClose:hover
+	{
+		background:rgba(250,215,82);
+		cursor: pointer;
+	}
+	.cssWinClose_2
+	{
+		position:absolute;
+		left:0px;
+		top:6px;
+		z-index=17;
+		width:140px;
+		height:25px;
+		color:aliceblue;
+		
+	}
+	.cssSwapButton
+	{
+		position:absolute;
+		left:400px;
+		top:400px;
+		z-index=16;
+		width:60px;
+		height:35px;
+		background:rgba(236,195,52) ;
+		
+	}
+	.cssSwapButton_2
+	{
+		position:absolute;
+		left:470px;
+		top:400px;
+		z-index=16;
+		width:60px;
+		height:35px;
+		background:rgba(236,195,52) ;
+		
+	}
+	.cssSwapButton:hover
+	{
+		background:rgba(250,215,82);
+		cursor: pointer;
+	}
+	.cssSwapButton_2:hover
+	{
+		background:rgba(250,215,82);
+		cursor: pointer;
+	}
+	.cssBG
+	{
+		left:0px;
+		top:0px;
+width:1502px;
+		height:713px;
+		padding:0px;
+		z-index: 1;
+		background: #F6F6F6
+	}
+	.cssICON_7_she
+	{
+    position: absolute;
+    left: 162px;
+    top: 28px;
+    z-index: 2;
+	}
+	.cssICON_6_she
+	{
+    position: absolute;
+    left: 306px;
+    top: 27px;
+    z-index: 2;
+	}
+	.cssICON_2_she
+	{
+    position: absolute;
+    left: 521.5px;
+    top: 30.5px;
+    z-index: 2;
+	}
+	.cssICON_hui_xing
+	{
+    position: absolute;
+    left: 720px;
+    top: 461px;
+    z-index: 2;
+	}
+	.cssICON_dong_pei_lou
+	{
+    position: absolute;
+    left: 837px;
+    top: 462px;
+    z-index: 3;
+	}
+	.cssICON_tao_li_yuan
+	{
+    position: absolute;
+    left: 447px;
+    top: 95px;
+    z-index: 3;
+	}
+	.cssICON_bgcs
+	{
+    position: absolute;
+    left: 447px;
+    top: 44px;
+    z-index: 3;
+	}
+	.cssICON_chu_ban_she
+	{
+    position: absolute;
+    left: 1142px;
+    top: 349px;
+    z-index: 3;
+	}
+	.cssICON_da_li_tang
+	{
+    position: absolute;
+    left: 918px;
+    top: 528px;
+    z-index: 3;
+	}
+	.cssICON_dong_jie_ti
+	{
+    position: absolute;
+    left: 632px;
+    top: 532px;
+    z-index: 3;
+	}
+	.cssICON_xi_jie_ti
+	{
+    position: absolute;
+    left: 470px;
+    top: 532px;
+    z-index: 3;
+	}
+	.cssICON_huai_yuan_lou
+	{
+    position: absolute;
+    left: 879px;
+    top: 588.3px;
+    z-index: 3;
+	}
+	.cssICON_ji_guan_lou
+	{
+    position: absolute;
+    left: 254px;
+    top: 528px;
+    z-index: 3;
+	}
+	.cssICON_ji_jiao
+	{
+    position: absolute;
+    left: 1003px;
+    top: 469.5px;
+    z-index: 3;
+	}
+	.cssICON_kuai_di_zhong_xin
+	{
+    position: absolute;
+    left: 634px;
+    top: 213.5px;
+    z-index: 3;
+	}
+	.cssICON_lan_qiu_chang
+	{
+    position: absolute;
+    left: 701px;
+    top: 349px;
+    z-index: 3;
+	}
+	.cssICON_li_xian_lou
+	{
+    position: absolute;
+    left: 1034px;
+    top: 349px;
+    z-index: 3;
+	}
+	.cssICON_liu_xue_sheng_su_she
+	{
+    position: absolute;
+    left: 635px;
+    top: 245.5px;
+    z-index: 3;
+	}
+	.cssICON_ming_wei_lou
+	{
+    position: absolute;
+    left: 1042px;
+    top: 561px;
+    z-index: 4;
+	}
+	.cssICON_qing_chan_shi_xun_zhong_xin
+	{
+    position: absolute;
+    left: 851px;
+    top: 320px;
+    z-index: 3;
+	}
+	.cssICON_shu_hui_ting
+	{
+    position: absolute;
+    left: 413px;
+    top: 657px;
+    z-index: 3;
+	}
+	.cssICON_su_yuan_lou
+	{
+    position: absolute;
+    left: 22.5px;
+    top: 577.5px;
+    z-index: 3;
+	}
+	.cssICON_tu_shu_guan
+	{
+    position: absolute;
+    left: 82px;
+    top: 433px;
+    z-index: 3;
+	}
+	.cssICON_wen_hua_ke_ji_yuan
+	{
+    position: absolute;
+    left: 1041px;
+    top: 595.5px;
+    z-index: 3;
+	}
+	.cssICON_xi_san_yuan_su
+	{
+    position: absolute;
+    left: 1135px;
+    top: 530px;
+    z-index: 5;
+	}
+	.cssICON_xin_li_ce_shi_shi_yan_shi
+	{
+    position: absolute;
+    left: 753px;
+    top: 274px;
+    z-index: 3;
+	}
+	.cssICON_zai_jian
+	{
+    position: absolute;
+    left: 1042px;
+    top: 493px;
+    z-index: 3;
+	}
+	.cssICON_zhe_li_lou
+	{
+    position: absolute;
+    left: 451.7px;
+    top: 588px;
+    z-index: 3;
+	}
+	
+	
+	
+	
+	.cssICON_1_she
+	{
+    position: absolute;
+    left: 582px;
+    top: 53px;
+    z-index: 3;
+	}
+	.cssICON_3_she
+	{
+    position: absolute;
+    left: 340px;
+    top: 171px;
+    z-index: 3;
+	}
+	.cssICON_4_she
+	{
+    position: absolute;
+    left: 450px;
+    top: 171px;
+    z-index: 3;
+	}
+	.cssICON_5_she
+	{
+    position: absolute;
+    left: 449.7px;
+    top: 223px;
+    z-index: 3;
+	}
+	.cssICON_8_she
+	{
+    position: absolute;
+    left: 173.7px;
+    top: 95.5px;
+    z-index: 3;
+	}
+	.cssICON_9_she
+	{
+    position: absolute;
+    left: 179.2px;
+    top: 167.5px;
+    z-index: 3;
+	}
+	.cssICON_10_she
+	{
+    position: absolute;
+    left: 302.2px;
+    top: 171px;
+    z-index: 3;
+	}
+	.cssICON_15_she
+	{
+    position: absolute;
+    left: 221px;
+    top: 424.5px;
+    z-index: 3;
+	}	.cssICON_16_she
+	{
+    position: absolute;
+    left: 967.7px;
+    top: 471.5px;
+    z-index: 3;
+	}	.cssICON_fa_shuo_gong_yv
+	{
+    position: absolute;
+    left: 290.7px;
+    top: 221.5px;
+    z-index: 3;
+	}.cssICON_ma_yuan_lou
+	{
+    position: absolute;
+    left: 378px;
+    top: 223px;
+    z-index: 3;
+	}.cssICON_san_shi_tang
+	{
+    position: absolute;
+    left: 222px;
+    top: 219.5px;
+    z-index: 4;
+	}.cssICON_si_shi_tang
+	{
+    position: absolute;
+    left: 222px;
+    top: 263px;
+    z-index: 3;
+	}.cssICON_qing_zhen_shi_tang
+	{
+    position: absolute;
+    left: 251px;
+    top: 292px;
+    z-index: 3;
+	}.cssICON_xue_fu_jiu_hao
+	{
+    position: absolute;
+    left: 290.5px;
+    top: 241.5px;
+    z-index: 3;
+	}.cssICON_hou_qin
+	{
+    position: absolute;
+    left: 309.7px;
+    top: 286px;
+    z-index: 3;
+	}.cssICON_xiao_yi_yuan
+	{
+    position: absolute;
+    left: 376.2px;
+    top: 93.7px;
+    z-index: 3;
+	}.cssICON_xiao_lan_qiu_chang
+	{
+    position: absolute;
+    left: 303.5px;
+    top: 95.5px;
+    z-index: 3;
+	}.cssICON_jiao_dian_fei
+	{
+    position: absolute;
+    left: 235.7px;
+    top: 332.5px;
+    z-index: 3;
+	}.cssICON_han_lin_yuan
+	{
+    position: absolute;
+    left: 223.5px;
+    top: 390px;
+    z-index: 3;
+	}.cssICON_ti_yv_guan
+	{
+    position: absolute;
+    left: 367px;
+    top: 384.5px;
+    z-index: 3;
+	}.cssICON_cao_chang
+	{
+    position: absolute;
+    left: 441.5px;
+    top: 333.5px;
+    z-index: 3;
+	}.cssICON_yan_jiu_sheng_yuan
+	{
+    position: absolute;
+    left: 533px;
+    top: 259px;
+    z-index: 3;
+	}.cssICON_guo_ji_jiao_yv_zhong_xin
+	{
+    position: absolute;
+    left: 607px;
+    top: 283px;
+    z-index: 3;
+	}.cssICON_bo_shi_lou
+	{
+    position: absolute;
+    left: 530.7px;
+    top: 171px;
+    z-index: 3;
+	}.cssICON_li_an_min_yan_jiu_yuan
+	{
+    position: absolute;
+    left: 406.7px;
+    top: 262.5px;
+    z-index: 3;
+	}.cssICON_jian_shen_zhong_xin
+	{
+    position: absolute;
+    left: 576.25px;
+    top: 27.7px;
+    z-index: 3;
+	}
+	
+	
+	
+	
+	
+	
+	.cssICON_zheng_men
+	{
+    position: absolute;
+    left: 304.7px;
+    top: 668px;
+    z-index: 3;
+	}.cssICON_dtz
+	{
+    position: absolute;
+    left: 99.7px;
+    top: 681px;
+    z-index: 3;
+	}.cssICON_dong_nan_men
+	{
+    position: absolute;
+    left: 929.7px;
+    top: 668.5px;
+    z-index: 3;
+	}.cssICON_pai_qiu_chang
+	{
+    position: absolute;
+    left: 368.7px;
+    top: 336.5px;
+    z-index: 3;
+	}.cssICON_wang_qiu_chang
+	{
+    position: absolute;
+    left: 489.7px;
+    top: 486px;
+    z-index: 3;
+	}.cssICON_xing_tan_ka_fei
+	{
+    position: absolute;
+    left: 452.5px;
+    top: 471.5px;
+    z-index: 3;
+	}.cssICON_pei_dian_shi
+	{
+    position: absolute;
+    left: 452px;
+    top: 503px;
+    z-index: 3;
+	}.cssICON_cszl
+	{
+    position: absolute;
+    left: 98px;
+    top: 693px;
+    z-index: 3;
+	}.cssICON_cjj
+	{
+    position: absolute;
+    left: 1199px;
+    top: 321px;
+    z-index: 3;
+}.cssICON_da_yin_dian
+	{
+    position: absolute;
+    left: 236.7px;
+    top: 346px;
+    z-index: 3;
+}.cssICON_da_xue_sheng_huo_dong_zhong_xin
+	{
+    position: absolute;
+    left: 157.7px;
+    top: 219px;
+    z-index: 3;
+	}
+	
+	
+	
+	
+	
+	.menu1
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index:6;
+	}.menu2
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 5;
+	}.menu3
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 4;
+	}
+	.menu1Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index:3;
+	}.menu2Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 3;
+	}.menu3Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 3;
+	}
+	.author
+	{
+		
+	}
+	.author:hover
+	{
+		cursor: pointer;
+	}
+	.cssICON_Title
+	{
+    position: absolute;
+    left: 685px;
+    top: 8px;
+    z-index: 2;
+	}
+	.cssICON_TL
+	{
+    position: absolute;
+    left: 1275px;
+    top: 320px;
+    z-index: 2;
+	}
+	.menu_title_1
+	{
+    position: absolute;
+    left: 897px;
+    top: 98px;
+		height:40px;
+		width:90px;
+    z-index: 6;
+	}
+	.nowLocText
+	{
+		position:absolute;
+		left:545px;
+		z-index:16;
+		top:405px;
+	}
+	.menu_title_1:hover
+	{
+		cursor: pointer
+	}
+	.menu_title_2
+	{
+    position: absolute;
+    left: 987px;
+    top: 98px;
+		height:40px;
+		width:90px;
+    z-index: 6;
+	}
+	.menu_title_2:hover
+	{
+		cursor: pointer
+	}
+	.menu_title_3
+	{
+    position: absolute;
+    left: 1077px;
+    top: 98px;
+		height:40px;
+		width:90px;
+    z-index: 6;
+	}
+	.menu_title_3:hover
+	{
+		cursor: pointer
+	}
+	.menu_page_1
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+	}
+	.menu_page_2
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+		height: 137px;
+		overflow-y: scroll;
+	}
+	.menu_page_3
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+		height: 137px;
+		overflow-y: scroll;
+	}
+	
+	
+	
+	
+	
+	.cssAuth
+	{
+    position: absolute;
+    left: 1250px;
+    z-index: 2;
+    top: 0px;
+	}
+	.search_downmenu
+	{
+    position: absolute;
+    left: 80px;
+    z-index: 7;
+    top: 23px;
+    width: 159px;
+    height: 170px;
+    background: #ffffff;
+    border: 1px solid #000000;
+		visibility:hidden;
+	}
+	.inner_downmenu
+	{
+		position: absolute;
+		left: 5px;
+		width:154px;
+		height: 150px;
+		overflow-y: scroll;
+		
+		
+	}
+	.closedownmenu
+	{
+		position: absolute;
+		left: 5px;
+		width:154px;
+		height:25px;
+		top:150px;
+	
+	}
+	
+	</style>
+</head>
+
+<body style="background:#8dbcf4">
+	<script>
+		var Loc=0;
+		var imgNum=0;
+		var LocID="";
+		function showMenu1()
+		{
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
+			aa.style.visibility="visible";
+			bb.style.visibility="hidden";
+			cc.style.visibility="hidden";
+		}
+		function showMenu2()
+		{
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
+			aa.style.visibility="hidden";
+			bb.style.visibility="visible";
+			cc.style.visibility="hidden";
+		}
+		function showMenu3()
+		{
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
+			aa.style.visibility="hidden";
+			bb.style.visibility="hidden";
+			cc.style.visibility="visible";
+		}
+		
+		
+		function change(UD,LocID)
+		{
+			var imgDiv=document.getElementById("ImageDiv");
+			imgDiv.innerHTML="<img src=\"images/photo/"+LocID+"/"+UD+".jpg\" width=\"300\" height=\"400\"/>";
+			var nowLoc=document.getElementById("nowLoc");
+			nowLoc.innerHTML=(Loc+1)+"/"+imgNum;
+		}	 
+		function showWind(title,text,Locid,iN)
+		{
+			imgNum=0;
+			Loc=0;
+			imgNum=iN;
+			LocID=Locid;
+			//document.getElementById("search_input").value=' ';
+			var imgDiv=document.getElementById("ImageDiv");
+			var windBG=document.getElementById("winBG");
+			var wind=document.getElementById("infoWind");
+			var infoDiv=document.getElementById("InfoDiv");
+			var titleDiv=document.getElementById("TitleDiv");
+			infoDiv.innerHTML=text;
+			titleDiv.innerHTML=title;
+			change(Loc,Locid);
+			var nowLoc=document.getElementById("nowLoc");
+			nowLoc.innerHTML=(Loc+1)+"/"+imgNum;
+			wind.style.visibility="visible";
+			windBG.style.visibility="visible";
+		}
+	 
+		function showWind2(title,text,Locid,iN,url,urlName)
+		{
+			imgNum=0;
+			Loc=0;
+			imgNum=iN;
+			LocID=Locid;
+			//document.getElementById("search_input").value=' ';
+			var imgDiv=document.getElementById("ImageDiv");
+			var windBG=document.getElementById("winBG");
+			var wind=document.getElementById("infoWind");
+			var infoDiv=document.getElementById("InfoDiv");
+			var titleDiv=document.getElementById("TitleDiv");
+			var ahref='<a href=\"'+url+'\">'+urlName+'</a>';
+			infoDiv.innerHTML=text+ahref;
+			titleDiv.innerHTML=title;
+			change(Loc,Locid);
+			var nowLoc=document.getElementById("nowLoc");
+			nowLoc.innerHTML=(Loc+1)+"/"+imgNum;
+			wind.style.visibility="visible";
+			windBG.style.visibility="visible";
+		}
+		function closeWind()
+		{
+			loc=0;
+			imgNum=0;
+			LocID="";
+			var wind=document.getElementById("infoWind");
+			var windBG=document.getElementById("winBG");
+			wind.style.visibility="hidden";
+			winBG.style.visibility="hidden";
+		}
+
+
+function showDownMenu()
+		{
+			document.getElementById("downmenu").style.visibility="visible";
+
+		}function showDownMenu2()
+		{
+			
+			var abcd=document.getElementById("search_input").value;
+			console.log(abcd);
+			if(abcd=="")
+				document.getElementById("search_input").value=' ';
+		}
+		function closeDownMenu()
+		{
+			document.getElementById("downmenu").style.visibility="hidden";
+		}
+		function setInput()
+		{
+var is=event.currentTarget;
+			console.log(is.innerHTML)
+			document.getElementById("search_input").value=is.innerHTML;
+		}
+const locMap=new Map(
+[
+["东配楼","dong_pei_lou"],
+["蕙星楼","hui_xing"],
+["蕙星","hui_xing"],
+["彗星楼","hui_xing"],
+["彗星","hui_xing"],
+["一舍","1_she"],
+["二舍","2_she"],
+["三舍","3_she"],
+["四舍","4_she"],
+["五舍","5_she"],
+["六舍","6_she"],
+["七舍","7_she"],
+["八舍","8_she"],
+["九舍","9_she"],
+["十舍","10_she"],
+["十五舍","15_she"],
+["十六舍","16_she"],
+["1舍","1_she"],
+["2舍","2_she"],
+["3舍","3_she"],
+["4舍","4_she"],
+["5舍","5_she"],
+["6舍","6_she"],
+["7舍","7_she"],
+["8舍","8_she"],
+["9舍","9_she"],
+["10舍","10_she"],
+["15舍","15_she"],
+["16舍","16_she"],
+["博士楼","bo_shi_lou"],
+["法硕公寓","fa_shuo_gong_yv"],
+["翰林园","han_lin_yuan"],
+["留学生宿舍","liu_xue_sheng_su_she"],
+["留学生公寓","liu_xue_sheng_su_she"],
+["友园","liu_xue_sheng_su_she"],
+["友园公寓","liu_xue_sheng_su_she"],
+["明微楼","ming_wei_lou"],
+["文化科技园","wen_hua_ke_ji_yuan"],
+["科技园","wen_hua_ke_ji_yuan"],
+["创新实践教学中心","zai_jian"],
+["辽大稀散","xi_san_yuan_su"],
+["稀散元素","xi_san_yuan_su"],
+["稀散","xi_san_yuan_su"],
+["化学院","ming_wei_lou"],
+["化学院楼","ming_wei_lou"],
+["轻产学院","huai_yuan_lou"],
+["怀远楼","huai_yuan_lou"],
+["环境学院","huai_yuan_lou"],
+["轻型产业","huai_yuan_lou"],
+["轻型产业学院","huai_yuan_lou"],
+["轻产院","huai_yuan_lou"],
+["轻产","huai_yuan_lou"],
+["环境","huai_yuan_lou"],
+["药学院","huai_yuan_lou"],
+["药院","huai_yuan_lou"],
+["药学院楼","huai_yuan_lou"],
+["环境学院楼","huai_yuan_lou"],
+["轻型产业学院楼","huai_yuan_lou"],
+["西配楼","hui_xing"],
+
+["礼堂","da_li_tang"],
+["大礼堂","da_li_tang"],
+["继续教育学院","ji_jiao"],
+["继教学院","ji_jiao"],
+["继教","ji_jiao"],
+["东配","dong_pei_lou"],
+["东阶梯","dong_jie_ti"],
+["西阶梯","xi_jie_ti"],
+["东阶","dong_jie_ti"],
+["西阶","xi_jie_ti"],
+["哲经楼","zhe_li_lou"],
+["哲理楼","zhe_li_lou"],
+["哲理","zhe_li_lou"],
+["数学院","zhe_li_lou"],
+["数学与统计学院","zhe_li_lou"],
+["信息学院","zhe_li_lou"],
+["数学与统计学院楼","zhe_li_lou"],
+["数院","zhe_li_lou"],
+["信息学院楼","zhe_li_lou"],
+["信院","zhe_li_lou"],
+
+["校部","ji_guan_lou"],
+["机关楼","ji_guan_lou"],
+["溯源楼","su_yuan_lou"],
+["环境学院实验中心","su_yuan_lou"],
+["生命科学院","su_yuan_lou"],
+["生命科学院楼","su_yuan_lou"],
+["生命学院","su_yuan_lou"],
+
+["树蕙亭","shu_hui_ting"],
+["篮球场","lan_qiu_chang"],
+["大篮球场","lan_qiu_chang"],
+["轻产实训中心","qing_chan_shi_xun_zhong_xin"],
+["轻型产业学院实训中心","qing_chan_shi_xun_zhong_xin"],
+["心理测试实验室","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析重点实验室","xin_li_ce_shi_shi_yan_shi"],
+["理贤楼","li_xian_lou"],
+["理贤","li_xian_lou"],
+["物理学院楼","li_xian_lou"],
+["物院","li_xian_lou"],
+["物理学院","li_xian_lou"],
+["物院楼","li_xian_lou"],
+["快递站","kuai_di_zhong_xin"],
+["菜鸟驿站","kuai_di_zhong_xin"],
+["快递中心","kuai_di_zhong_xin"],
+["快递","kuai_di_zhong_xin"],
+["快递点","kuai_di_zhong_xin"],
+["取快递","kuai_di_zhong_xin"],
+["国际教育中心","guo_ji_jiao_yv_zhong_xin"],
+["国际交流中心","guo_ji_jiao_yv_zhong_xin"],
+["国际教育","guo_ji_jiao_yv_zhong_xin"],
+["国教中心","guo_ji_jiao_yv_zhong_xin"],
+["研究生院","yan_jiu_sheng_yuan"],
+["博远楼","yan_jiu_sheng_yuan"],
+["操场","cao_chang"],
+["运动场","cao_chang"],
+["足球场","cao_chang"],
+["体育场","cao_chang"],
+["网球场","wang_qiu_chang"],
+["网球","wang_qiu_chang"],
+["百果超市","bgcs"],
+["培训公寓","15_she"],
+["浴池","bgcs"],
+["校园卡中心","bgcs"],
+["太平洋咖啡","bgcs"],
+["沪上阿姨","bgcs"],
+["水果店","bgcs"],
+["理发","bgcs"],
+["理发店","bgcs"],
+["艺凡发艺","bgcs"],
+["四季鲜果","bgcs"],
+["复印","bgcs"],
+["澡堂子","bgcs"],
+["浴池","bgcs"],
+["澡堂","bgcs"],
+["健身中心","jian_shen_zhong_xin"],
+["健身房","jian_shen_zhong_xin"],
+["斯巴达健身中心","jian_shen_zhong_xin"],
+["斯巴达","jian_shen_zhong_xin"],
+["桃李园食堂","tao_li_yuan"],
+["桃李园","tao_li_yuan"],
+["一食堂","tao_li_yuan"],
+["1食堂","tao_li_yuan"],
+["二食堂","tao_li_yuan"],
+["2食堂","tao_li_yuan"],
+["公共基础学院","hui_xing"],
+["杏坛咖啡","xing_tan_ka_fei"],
+["变电所","pei_dian_shi"],
+
+["杏坛","xing_tan_ka_fei"],
+["体育馆","ti_yv_guan"],
+["乒乓球馆","ti_yv_guan"],
+["排球场","pai_qiu_chang"],
+["排球","pai_qiu_chang"],
+["乒乓球","ti_yv_guan"],
+["马克思主义学院","ma_yuan_lou"],
+["马院","ma_yuan_lou"],
+["马克思主义学院楼","ma_yuan_lou"],
+["马院楼","ma_yuan_lou"],
+["学府九号","xue_fu_jiu_hao"],
+["学府9号","xue_fu_jiu_hao"],
+["西南门","xi_nan_men"],
+["后勤","hou_qin"],
+["后勤发展集团","hou_qin"],
+["校医院","xiao_yi_yuan"],
+["医院","xiao_yi_yuan"],
+["小篮球场","xiao_lan_qiu_chang"],
+["清真食堂","qing_zhen_shi_tang"],
+["三食堂","san_shi_tang"],
+["3食堂","san_shi_tang"],
+["四食堂","san_shi_tang"],
+["4食堂","san_shi_tang"],
+["和园","san_shi_tang"],
+["和园食堂","san_shi_tang"],
+["和园餐厅","san_shi_tang"],
+["三四食堂","san_shi_tang"],
+["大学生活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["大活","da_xue_sheng_huo_dong_zhong_xin"],
+["交电费","jiao_dian_fei"],
+["售电处","jiao_dian_fei"],
+["电费缴纳","jiao_dian_fei"],
+["电费","jiao_dian_fei"],
+["打印店","da_yin_dian"],
+["印刷厂","da_yin_dian"],
+["五洲园","li_an_min_yan_jiu_yuan"],
+["五洲园宾馆","li_an_min_yan_jiu_yuan"],
+["经济研究院","li_an_min_yan_jiu_yuan"],
+["李安民经济研究院","li_an_min_yan_jiu_yuan"],
+["正门","zheng_men"],
+["东南门","dong_nan_men"],
+["南门","zheng_men"],
+["树蕙亭","shu_hui_ting"],
+["图书馆","tu_shu_guan"],
+["阅览室","tu_shu_guan"]
+
+
+
+
+
+
+]);
+
+
+
+
+const locHelpMap=new Map(
+[
+["东配楼","蕙星楼旁边的七层阶梯教室楼。"],
+["蕙星楼","蕙星楼，十层高的白色教学楼，位于崇山校区南部。"],
+["蕙星","蕙星楼，十层高的白色教学楼，位于崇山校区南部。"],
+["彗星楼","蕙星楼，十层高的白色教学楼，位于崇山校区南部。"],
+["彗星","蕙星楼，十层高的白色教学楼，位于崇山校区南部。"],
+["一舍","可点击图中地点查看图文信息。"],
+["二舍","可点击图中地点查看图文信息。"],
+["三舍","可点击图中地点查看图文信息。"],
+["四舍","可点击图中地点查看图文信息。"],
+["五舍","可点击图中地点查看图文信息。"],
+["六舍","可点击图中地点查看图文信息。"],
+["七舍","可点击图中地点查看图文信息。"],
+["八舍","可点击图中地点查看图文信息。"],
+["九舍","可点击图中地点查看图文信息。"],
+["十舍","可点击图中地点查看图文信息。"],
+["十五舍","可点击图中地点查看图文信息。"],
+["十六舍","可点击图中地点查看图文信息。"],
+["1舍","可点击图中地点查看图文信息。"],
+["2舍","可点击图中地点查看图文信息。"],
+["3舍","可点击图中地点查看图文信息。"],
+["4舍","可点击图中地点查看图文信息。"],
+["5舍","可点击图中地点查看图文信息。"],
+["6舍","可点击图中地点查看图文信息。"],
+["7舍","可点击图中地点查看图文信息。"],
+["8舍","可点击图中地点查看图文信息。"],
+["9舍","可点击图中地点查看图文信息。"],
+["10舍","可点击图中地点查看图文信息。"],
+["15舍","可点击图中地点查看图文信息。"],
+["16舍","可点击图中地点查看图文信息。"],
+["博士楼","可点击图中地点查看图文信息。"],
+["法硕公寓","可点击图中地点查看图文信息。"],
+["翰林园","可点击图中地点查看图文信息。"],
+["留学生宿舍","可点击图中地点查看图文信息。"],
+["留学生公寓","可点击图中地点查看图文信息。"],
+["友园","友园公寓，为留学生所居住的公寓楼。"],
+["友园公寓","友园公寓，为留学生所居住的公寓楼。"],
+["明微楼","可点击图中地点查看图文信息。"],
+["文化科技园","可点击图中地点查看图文信息。"],
+["科技园","可点击图中地点查看图文信息。"],
+["创新实践教学中心","可点击图中地点查看图文信息。"],
+["辽大稀散","可点击图中地点查看图文信息。"],
+["稀散元素","可点击图中地点查看图文信息。"],
+["稀散","可点击图中地点查看图文信息。"],
+["化学院","可点击图中地点查看图文信息。"],
+["化学院楼","可点击图中地点查看图文信息。"],
+["轻产学院","可点击图中地点查看图文信息。"],
+["怀远楼","可点击图中地点查看图文信息。"],
+["环境学院","可点击图中地点查看图文信息。"],
+["国际交流中心","国际教育中心，又称为国际交流中心。"],
+["培训公寓","15舍宿舍，为培训公寓。"],
+["轻型产业","可点击图中地点查看图文信息。"],
+["轻型产业学院","可点击图中地点查看图文信息。"],
+["轻产院","可点击图中地点查看图文信息。"],
+["轻产","可点击图中地点查看图文信息。"],
+["环境","可点击图中地点查看图文信息。"],
+["药学院","可点击图中地点查看图文信息。"],
+["药院","可点击图中地点查看图文信息。"],
+["药学院楼","可点击图中地点查看图文信息。"],
+["环境学院楼","可点击图中地点查看图文信息。"],
+["轻型产业学院楼","可点击图中地点查看图文信息。"],
+["西配楼","西配楼为蕙星楼一部分，和东配楼相对，楼门平时不开，需要先进入蕙星楼通过走廊进入西配楼。"],
+
+["礼堂","可点击图中地点查看图文信息。"],
+["大礼堂","可点击图中地点查看图文信息。"],
+["继续教育学院","可点击图中地点查看图文信息。"],
+["继教学院","可点击图中地点查看图文信息。"],
+["继教","可点击图中地点查看图文信息。"],
+["东配","可点击图中地点查看图文信息。"],
+["东阶梯","可点击图中地点查看图文信息。"],
+["西阶梯","可点击图中地点查看图文信息。"],
+["东阶","可点击图中地点查看图文信息。"],
+["西阶","可点击图中地点查看图文信息。"],
+["哲经楼","哲理楼，原名哲经楼。"],
+["哲理楼","可点击图中地点查看图文信息。"],
+["哲理","可点击图中地点查看图文信息。"],
+["数学院","可点击图中地点查看图文信息。"],
+["数学与统计学院","可点击图中地点查看图文信息。"],
+["信息学院","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+["数学与统计学院楼","可点击图中地点查看图文信息。"],
+["数院","可点击图中地点查看图文信息。"],
+["信息学院楼","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+["信院","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+
+["校部","校部位于正门北部"],
+["机关楼","机关楼（校部）位于正门北部"],
+["溯源楼","可点击图中地点查看图文信息。"],
+["环境学院实验中心","可点击图中地点查看图文信息。"],
+["生命科学院","可点击图中地点查看图文信息。"],
+["生命科学院楼","可点击图中地点查看图文信息。"],
+["生命学院","可点击图中地点查看图文信息。"],
+
+["树蕙亭","可点击图中地点查看图文信息。"],
+["篮球场","可点击图中地点查看图文信息。"],
+["大篮球场","可点击图中地点查看图文信息。"],
+["轻产实训中心","可点击图中地点查看图文信息。"],
+["轻型产业学院实训中心","可点击图中地点查看图文信息。"],
+["心理测试实验室","可点击图中地点查看图文信息。"],
+["心理测试与行为分析","可点击图中地点查看图文信息。"],
+["心理测试与行为分析重点实验室","可点击图中地点查看图文信息。"],
+["理贤楼","可点击图中地点查看图文信息。"],
+["理贤","可点击图中地点查看图文信息。"],
+["物理学院楼","可点击图中地点查看图文信息。"],
+["物院","可点击图中地点查看图文信息。"],
+["物理学院","可点击图中地点查看图文信息。"],
+["物院楼","可点击图中地点查看图文信息。"],
+["快递站","可点击图中地点查看图文信息。"],
+["菜鸟驿站","菜鸟驿站位于快递中心进门左手边。"],
+["快递中心","可点击图中地点查看图文信息。"],
+["快递","可点击图中地点查看图文信息。"],
+["快递点","可点击图中地点查看图文信息。"],
+["取快递","可点击图中地点查看图文信息。"],
+["国际教育中心","可点击图中地点查看图文信息。"],
+["国际教育","可点击图中地点查看图文信息。"],
+["国教中心","可点击图中地点查看图文信息。"],
+["研究生院","可点击图中地点查看图文信息。"],
+["博远楼","可点击图中地点查看图文信息。"],
+["操场","可点击图中地点查看图文信息。"],
+["运动场","可点击图中地点查看图文信息。"],
+["足球场","可点击图中地点查看图文信息。"],
+["体育场","可点击图中地点查看图文信息。"],
+["网球场","可点击图中地点查看图文信息。"],
+["网球","可点击图中地点查看图文信息。"],
+["百果超市","可点击图中地点查看图文信息。"],
+["培训公寓","15舍培训公寓，位于图书馆对面。"],
+["浴池","可点击图中地点查看图文信息。"],
+["校园卡中心","校园卡中心位于百果超市三楼浴池旁边。"],
+["太平洋咖啡","太平洋咖啡位于百果超市二楼浴池旁边。"],
+["沪上阿姨","沪上阿姨奶茶店位于百果超市一楼，太平洋咖啡楼下。"],
+["理发店","艺凡发艺位于百果超市2楼，男浴池旁边。"],
+["理发","艺凡发艺位于百果超市2楼，男浴池旁边。"],
+["艺凡发艺","艺凡发艺位于百果超市2楼，男浴池旁边。"],
+
+["水果店","四季鲜果位于太平洋咖啡楼下，沪上阿姨旁边。"],
+["四季鲜果","四季鲜果位于太平洋咖啡楼下，沪上阿姨旁边。"],
+["复印","复印店位于百果超市后门旁，男浴池楼下。"],
+["澡堂子","浴池位于百果超市东部，男浴池位于2楼，女浴池位于3楼。"],
+["澡堂","浴池位于百果超市东部，男浴池位于2楼，女浴池位于3楼。"],
+["浴池","浴池位于百果超市东部，男浴池位于2楼，女浴池位于3楼。"],
+["健身中心","可点击图中地点查看图文信息。"],
+["健身房","可点击图中地点查看图文信息。"],
+["斯巴达健身中心","可点击图中地点查看图文信息。"],
+["斯巴达","可点击图中地点查看图文信息。"],
+["桃李园食堂","可点击图中地点查看图文信息。"],
+["桃李园","可点击图中地点查看图文信息。"],
+["一食堂","一食堂位于桃李园食堂一楼。"],
+["1食堂","一食堂位于桃李园食堂一楼。"],
+["二食堂","二食堂位于桃李园食堂2楼。"],
+["2食堂","二食堂位于桃李园食堂2楼。"],
+["公共基础学院","公共基础学院位于蕙星楼9楼。"],
+["杏坛咖啡","可点击图中地点查看图文信息。"],
+["变电所","可点击图中地点查看图文信息。"],
+
+["杏坛","可点击图中地点查看图文信息。"],
+["体育馆","可点击图中地点查看图文信息。"],
+["乒乓球馆","乒乓球馆位于体育馆内部。"],
+["排球场","可点击图中地点查看图文信息。"],
+["排球","可点击图中地点查看图文信息。"],
+["乒乓球","乒乓球馆位于体育馆内部。"],
+["马克思主义学院","可点击图中地点查看图文信息。"],
+["马院","可点击图中地点查看图文信息。"],
+["马克思主义学院楼","可点击图中地点查看图文信息。"],
+["马院楼","可点击图中地点查看图文信息。"],
+["学府九号","可点击图中地点查看图文信息。"],
+["学府9号","可点击图中地点查看图文信息。"],
+["后勤","可点击图中地点查看图文信息。"],
+["后勤发展集团","可点击图中地点查看图文信息。"],
+["校医院","可点击图中地点查看图文信息。"],
+["医院","可点击图中地点查看图文信息。"],
+["小篮球场","可点击图中地点查看图文信息。"],
+["清真食堂","可点击图中地点查看图文信息。"],
+["三食堂","可点击图中地点查看图文信息。"],
+["3食堂","可点击图中地点查看图文信息。"],
+["四食堂","可点击图中地点查看图文信息。"],
+["4食堂","可点击图中地点查看图文信息。"],["辽宁大学出版社","可点击图中地点查看图文信息。"],
+["三四食堂","北边靠近九舍的是三食堂，南边的是四食堂。"],
+["大学生活动中心","三食堂楼上为大学生活动中心，在三四食堂之间的楼梯进入。"],
+["活动中心","三食堂楼上为大学生活动中心，在三四食堂之间的楼梯进入。"],
+["大活","三食堂楼上为大学生活动中心，在三四食堂之间的楼梯进入。"],
+["交电费","可点击图中地点查看图文信息。（临时迁至斯巴达健身中心）"],
+["电费缴纳","可点击图中地点查看图文信息。（临时迁至斯巴达健身中心）"],
+["电费","可点击图中地点查看图文信息。（临时迁至斯巴达健身中心）"],
+["售电处","可点击图中地点查看图文信息。（临时迁至斯巴达健身中心）"],
+["打印店","打印店（印刷厂）位于翰林园旁边小胡同往里走左转的砖房。"],
+["印刷厂","打印店（印刷厂）位于翰林园旁边小胡同往里走左转的砖房。"],
+["五洲园","可点击图中地点查看图文信息。"],
+["五洲园宾馆","可点击图中地点查看图文信息。"],
+["经济研究院","可点击图中地点查看图文信息。"],
+["李安民经济研究院","可点击图中地点查看图文信息。"],
+["正门","百鸟公园对着的是正门，旁边有百鸟公园地铁站，进门为机关楼。"],
+["东南门","靠近长江街的是东南门，进门为怀远楼，附近有长江街地铁站和北行商业街。"],
+["南门","百鸟公园对着的是正门，旁边有百鸟公园地铁站，进门为机关楼。"],
+["西南门","百鸟公园对着的是正门，旁边有百鸟公园地铁站，进门为机关楼。"],
+["树蕙亭","可点击图中地点查看图文信息。"],
+["图书馆","可点击图中地点查看图文信息。"],
+["阅览室","图书馆二楼为文史类阅览室和电子阅览室，三楼为理工科阅览室。"]
+]);
+
+
+
+
+
+
+
+
+		function search()
+		{
+
+			var inp=document.getElementById("search_input")
+			var stri=inp.value;
+			stri=stri.replace(' ', '');
+			console.log('搜索：'+stri);
+			var loctId=locMap.get(stri);
+console.log(stri+' ID:'+loctId);
+			var tempKey=locHelpMap.get(stri);
+			document.getElementById("locHelp").innerHTML=tempKey;
+			var classnm="cssICON_"+loctId;
+			var pic= (document.getElementsByClassName(classnm))[0];
+			//pic.style.transition = "5s";
+			//pic.style.background="#123456";
+			var indiv=document.createElement("div");
+			indiv.setAttribute('style','position: absolute;width:100%;height:100%;left:0px;top:0px;background:rgba(255,255,255,0)');
+			
+			
+			pic.appendChild(indiv);
+			indiv.style.transition = "0.5s";
+			//indiv.style.background="rgba(100,100,100,0.5)";
+			
+			
+			
+					setTimeout(()=>{
+						indiv.style.background="rgba(20,20,20,0.6)";
+						setTimeout(()=>{
+							indiv.style.background="rgba(99,99,99,0)";console.log("1");
+						},1000);
+						},0);
+					setTimeout(()=>{
+						indiv.style.background="rgba(20,20,20,0.6)";
+						setTimeout(()=>{
+							indiv.style.background="rgba(99,99,99,0)";console.log("2");
+						},2000);
+						},1000);
+			setTimeout(()=>{
+						indiv.style.background="rgba(20,20,20,0.6)";
+						setTimeout(()=>{
+							indiv.style.background="rgba(99,99,99,0)";console.log("del");
+							indiv.remove();
+						},2200);
+						},2200);
+					
+			
+			
+		}
+	</script>
+	
+	
+	<div id="main" class="cssBG"> 
+
+		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
+<div id="infoWind" class="cssWind" ><img src="images/wind.png" width="800">
+		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+imgNum-1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;上一张</div>
+		  </div>
+		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;下一张</div>
+		  </div>
+<div id="nowLoc" class="nowLocText">
+	
+</div>
+		  <div id="closeWind" class="cssWinClose" onclick="closeWind()"><div class="cssWinClose_2">&nbsp; &nbsp; &nbsp; &nbsp;关 &nbsp; &nbsp; &nbsp; &nbsp; 闭&nbsp; &nbsp; &nbsp;</div></div>
+			<div id="ImageDivBG" class="cssWinImgDivBG"></div>
+			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
+			<div id="InfoDiv" class="cssWinInfDiv">显示文字</div>
+			<div id="TitleDiv" class="cssWinTitleDiv">显示标题</div>
+	<div style="position: absolute; top: 410px; left: -35px">
+	  	<img src="images/yxy.png" width="90"  alt=""/>	</div>
+	<div style="position: absolute; top: 24px; left: 715px">
+	  	<img src="images/图片2.png" width="156"  alt=""/>	</div>
+		
+		
+		</div>
+<img src="mapBack.png" width="1200"/><div ><br></div>
+	  <div class="cssICON_Title"><img src="images/Title.png" width="800" alt=""/><div style=" position: absolute;right: 9px;font-size: 10px;">v1.1 &nbsp; 2023年10月22日更新</div></div>
+	  <div class="cssICON_TL"><img src="images/tl.png" width="180" alt=""/></div>	
+		
+		
+		
+	  <div class="cssICON_7_she" onclick="LocID='7_she';imgNum=4;showWind2('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。<br>','7_she',9,'https://www.bilibili.com/video/BV1TW4y157zd','3D还原视频')"><img src="images/icon/7_she.png" width="130" height="25" /></div>
+	  <div class="cssICON_6_she" onclick="LocID='6_she';imgNum=3;showWind('六舍学生宿舍','六舍学生宿舍位于辽宁大学崇山校区西北部，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','6_she',4)"><img src="images/icon/6_she.png" width="134" height="26" /></div>
+	  <div class="cssICON_hui_xing" onclick="LocID='hui_xing_lou';imgNum=21;showWind('蕙星楼','蕙星楼位于辽宁大学正南部，是一栋白色10层教学楼，为老校区最大的教学楼。英语课等一部分公共课以及一些通识课在此楼上课。<br><br>1楼有化学实验室。<br>2~8楼大部分教室没课时可以上自习，教室可以申请用来召开会议或开展社团活动。<br>英语听力教室和公共基础学院位于9楼。<br>楼内配有两部电梯，楼后的小门平时开放到6：00，周末不开放小门。<br>蕙星楼开放时间：6：00--21：30','hui_xing_lou',21)"><img src="images/icon/hui_xing_lou.png" width="150"  /></div>
+	  <div class="cssICON_dong_pei_lou" onclick="LocID='dong_pei_lou';imgNum=4;showWind('东配楼','7层阶梯教室楼，每层3间大型阶梯教室，每间教室可容纳200人。','dong_pei_lou',4)"><img src="images/icon/dong_pei_lou.png" width="33.5"  /></div>
+	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。<br>一楼二楼分别是1食堂和2食堂，三楼为特色食堂。食堂楼下有书生食铺，丽源超市和贡茶，食堂正门两侧分别是文具店和化妆品店。','tao_li_yuan_shi_tang',4)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="64"  /></div>
+	  <div class="cssICON_2_she" onclick="LocID='2_she';imgNum=1;showWind('学生宿舍二舍','学生宿舍二舍为女寝，宿舍楼于2000年竣工，共七层，宿舍配备有阳台。','2_she',1)"><img src="images/icon/2_she.png" width="55"  /></div>
+	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：<br>一楼为百果超市，超市内部有手机维修和数码产品出售，配钥匙，移动营业厅，摄影，眼镜店。一楼东侧外面有美妆店，沪上阿姨，四季鲜果，打印复印店。<br>二楼为太平洋咖啡，艺凡发艺和男浴池 <br>三楼为校园卡中心和女浴池，校园卡挂失与解冻到校园卡中心办理。 <br>百果超市开业时间为7:40--21:20','bgcs',4)"><img src="images/icon/bgcs.png" width="62"  /></div>
+		
+		
+		
+	
+	  <div class="cssICON_chu_ban_she" onclick="LocID='chu_ban_she';imgNum=1;showWind('辽宁大学出版社','辽宁大学出版社办公楼（业务培训楼），建于1994年，共9层。','chu_ban_she',2)"><img src="images/icon/chu_ban_she.png" width="52"  /></div>	
+	  <div class="cssICON_da_li_tang" onclick="LocID='da_li_tang';imgNum=4;showWind('大礼堂','崇山校区大礼堂位于怀远楼北面，修建于80年代中期，于2008年修缮。现用作文艺演出等活动场地。','da_li_tang',4)"><img src="images/icon/da_li_tang.png" width="86"  /></div>	
+	  <div class="cssICON_dong_jie_ti" onclick="LocID='dong_jie_ti';imgNum=3;showWind('东阶梯教学楼','东阶梯教学楼位于蕙星楼西侧，为3层阶梯教室楼，每层有两间不同规格的阶梯教室，不可用于自习。东阶梯和西阶梯教学楼外观相似，分布在哲理楼后侧的两端。','dong_jie_ti',3)"><img src="images/icon/dong_jie_ti.png" width="43"  /></div>	
+	  <div class="cssICON_xi_jie_ti" onclick="LocID='xi_jie_ti';imgNum=3;showWind('西阶梯教学楼','西阶梯教学楼位于哲理楼西北方向，银杏路旁，为3层阶梯教室楼，每层有两间不同规格的阶梯教室，没课时可用于自习。东阶梯和西阶梯教学楼外观相似，分别位于哲理楼后侧的两端。','xi_jie_ti',3)"><img src="images/icon/xi_jie_ti.png" width="42"  /></div>	
+	  <div class="cssICON_huai_yuan_lou" onclick="LocID='huai_yuan_lou';imgNum=7;showWind('怀远楼','怀远楼正对着崇山校区东南门，1953年投入使用，为苏联风格建筑，立面风格类似于俄罗斯冬宫，原为沈阳俄文专科学校教学楼，现在为辽宁大学轻型产业学院，药学院和环境学院科研实验楼。','huai_yuan_lou',7)"><img src="images/icon/huai_yuan_lou.png" width="142.5"  /></div>	
+	  <div class="cssICON_ji_guan_lou" onclick="LocID='ji_guan_lou';imgNum=5;showWind2('机关楼','机关楼建于1956年，正对着崇山校区正门，原为辽宁大学图书馆，现作为辽宁大学崇山校区校部办公楼，辽大党校所在地。','ji_guan_lou',5,'https://www.bilibili.com/video/BV1714y117rU','3D还原视频')"><img src="images/icon/ji_guan_lou.png" width="151"  /></div>		
+	  <div class="cssICON_ji_jiao" onclick="LocID='ji_jiao';imgNum=3;showWind('人文科技学院','辽宁大学人文科技学院楼。','ji_jiao',3)"><img src="images/icon/ji_jiao.png" width="19"  /></div>	
+	  <div class="cssICON_kuai_di_zhong_xin" onclick="LocID='kuai_di_zhong_xin';imgNum=2;showWind('快递中心','崇山校区的快递中心，所有的快递都在这里取，这里也可以邮寄快递。','kuai_di_zhong_xin',2)"><img src="images/icon/kuai_di_zhong_xin.png" width="134"  /></div>	
+	  <div class="cssICON_lan_qiu_chang" onclick="LocID='lan_qiu_chang';imgNum=4;showWind('篮球场','崇山校区大篮球场，位于蕙星楼后侧，为2022年新修建的标准篮球场，共有8个标准场地，崇山校区的各大篮球比赛在此举行。','lan_qiu_chang',4)"><img src="images/icon/lan_qiu_chang.png" width="69"  /></div>	
+	  <div class="cssICON_li_xian_lou" onclick="LocID='li_xian_lou';imgNum=4;showWind('理贤楼','理贤楼位于崇山校区东部，共9层，为物理学院的科研办公楼，配备有各类物理实验室。理工科的大物实验在此楼进行。','li_xian_lou',4)"><img src="images/icon/li_xian_lou.png" width="97"  /></div>	
+	  <div class="cssICON_liu_xue_sheng_su_she" onclick="LocID='liu_xue_sheng_su_she';imgNum=2;showWind('友园留学生宿舍','友园留学生宿舍，建于2005年，共七层。楼内配备有电梯，宿舍为单人单间，有独立卫浴。','liu_xue_sheng_su_she',2)"><img src="images/icon/liu_xue_sheng_su_she.png" width="142"  /></div>
+		
+	  <div class="cssICON_ming_wei_lou" onclick="LocID='ming_wei_lou';imgNum=6;showWind('明微楼','明微楼位于崇山校区东南部，建于1966年，原为辽宁大学理工楼，现作为辽宁大学化学学院科研办公楼。','ming_wei_lou',6)"><img src="images/icon/ming_wei_lou.png" width="131"  /></div>
+	  <div class="cssICON_qing_chan_shi_xun_zhong_xin" onclick="LocID='cssICON_qing_chan_shi_xun_zhong_xin';imgNum=3;showWind('轻型产业学院实训中心','轻型产业学院的实训中心（大活），内有轻产实验室，可进行实验活动。','qing_chan_shi_xun_zhong_xin',3)"><img src="images/icon/qing_chan_shi_xun_zhong_xin.png" width="38.5"  /></div>	
+	  <div class="cssICON_shu_hui_ting" onclick="LocID='shu_hui_ting';imgNum=4;showWind('树蕙亭','银杏路南端的景观亭子，树蕙亭旁有假山与荷塘等景观，假山中有小型瀑布，荷塘中可以看到鱼。','shu_hui_ting',4)"><img src="images/icon/shu_hui_ting.png" width="57"  /></div>	
+	  <div class="cssICON_su_yuan_lou" onclick="LocID='su_yuan_lou';imgNum=5;showWind('溯源楼','溯源楼位于崇山校区西南部，图书馆南侧。现作为辽宁大学生命科学院的科研办公楼和环境学院的实验中心。','su_yuan_lou',5)"><img src="images/icon/su_yuan_lou.png" width="171"  /></div>	
+	  <div class="cssICON_tu_shu_guan" onclick="LocID='tu_shu_guan';imgNum=9;showWind('图书馆','崇山校区图书馆位于崇山校区西南部，1998年投入使用，图书馆共6层。进入图书馆需刷校园卡或刷脸通过门禁，可使用校园卡外借书籍或不使用校园卡在阅览室内借阅。<br>1楼为基藏书库和办公区域，电梯西侧有开水间。<br>2楼有文史类阅览室以及电子阅览室，南侧为学术报告厅。<br>3楼分布有理工科阅览室以及古籍修复室。<br>4楼南北各有一间自修室，自修室在二楼刷卡使用,东侧为自然历史博物馆，存放生物标本。<br>5楼和6楼为办公区域。<br>图书馆开放时间：<br>6:00--21:30 阅览室开放  <br>6:00--22:00 自修室开放','tu_shu_guan',9)"><img src="images/icon/tu_shu_guan.png" width="114"  /></div>	
+	  <div class="cssICON_wen_hua_ke_ji_yuan" onclick="LocID='wen_hua_ke_ji_yuan';imgNum=1;showWind('文化科技园','辽宁大学文化科技园，一楼为门市，楼内有培训机构与店铺等商户。','wen_hua_ke_ji_yuan',1)"><img src="images/icon/wen_hua_ke_ji_yuan.png" width="158"  /></div>	
+	  <div class="cssICON_xi_san_yuan_su" onclick="LocID='xi_san_yuan_su';imgNum=2;showWind('辽宁大学稀散元素','辽宁大学稀散化学元素存放地。','xi_san_yuan_su',2)"><img src="images/icon/xi_san_yuan_su.png" width="27"  /></div>	
+	  <div class="cssICON_xin_li_ce_shi_shi_yan_shi" onclick="LocID='xin_li_ce_shi_shi_yan_shi';imgNum=2;showWind('心理测试与行为分析重点实验室','辽宁省科学技术厅在辽宁大学开设的辽宁省心理测试与行为分析实验室，原址为友园食堂，2022年改建为心理测试实验室。','xin_li_ce_shi_shi_yan_shi',2)"><img src="images/icon/xin_li_ce_shi_shi_yan_shi.png" width="90"  /></div>	
+	  <div class="cssICON_zai_jian" onclick="LocID='zai_jian';imgNum=4;showWind('创新实践教学中心（在建）','辽宁大学创新实践教学中心（在建）。','zai_jian',4)"><img src="images/icon/zai_jian.png" width="129.5"  /></div>	
+	  <div class="cssICON_zhe_li_lou" onclick="LocID='zhe_li_lou';imgNum=11;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。哲理楼南门不经常开放，需要从北门（后门）进入。&nbsp;<br><br>信息学院官网：https://sist.lnu.edu.cn/<br>数学与统计学院官网：https://ms.lnu.edu.cn/xygk/xyjj.htm','zhe_li_lou',11)"><img src="images/icon/zhe_li_lou.png" width="244"  /></div>	
+		
+		
+		
+		
+
+	  <div class="cssICON_jian_shen_zhong_xin" onclick="LocID='jian_shen_zhong_xin';imgNum=2;showWind('斯巴达健身中心','斯巴达健身中心位于崇山校区东北角，内部有乒乓球桌，台球桌等体育设施。2023年6月8日起，售电处搬至斯巴达健身中心一楼。','jian_shen_zhong_xin',2)"><img src="images/icon/jian_shen_zhong_xin.png" width="32"  /></div>	
+	  <div class="cssICON_8_she" onclick="LocID='8_she';imgNum=2;showWind('学生宿舍八舍','八舍学生宿舍位于辽宁大学崇山校区西北部，女寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','8_she',3)"><img src="images/icon/8_she.png" width="121"  /></div>	
+	  <div class="cssICON_9_she" onclick="LocID='9_she';imgNum=2;showWind('学生宿舍九舍','九舍学生宿舍位于辽宁大学崇山校区西北部，女寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','9_she',2)"><img src="images/icon/9_she.png" width="112.2"  /></div>	
+	  <div class="cssICON_10_she" onclick="LocID='10_she';imgNum=2;showWind('学生宿舍十舍','十舍学生宿舍位于辽宁大学崇山校区西北部，小篮球场旁边，与三舍相邻。男寝，没有阳台，无独立卫浴。','10_she',2)"><img src="images/icon/10_she.png" width="38.3"  /></div>	
+	  <div class="cssICON_1_she" onclick="LocID='1_she';imgNum=1;showWind('学生宿舍一舍','一舍位于桃李园食堂对面，为研究生女寝，无阳台无独立卫浴。','1_she',1)"><img src="images/icon/1_she.png" width="27.5"  /></div>	
+	  <div class="cssICON_3_she" onclick="LocID='3_she';imgNum=2;showWind('学生宿舍三舍','三舍学生宿舍位于辽宁大学崇山校区西北部，小篮球场旁边，与十舍相邻。研究生男寝，没有阳台，无独立卫浴，六人寝上下铺。','3_she',2)"><img src="images/icon/3_she.png" width="88.5"  /></div>	
+	  <div class="cssICON_4_she" onclick="LocID='4_she';imgNum=2;showWind('学生宿舍四舍','四舍位于桃李园食堂南部，为研究生男寝，没有阳台，无独立卫浴。','4_she',2)"><img src="images/icon/4_she.png" width="64.5"  /></div>		
+	  <div class="cssICON_5_she" onclick="LocID='5_she';imgNum=2;showWind('学生宿舍五舍','五舍为留学生宿舍','5_she',2)"><img src="images/icon/5_she.png" width="65"  /></div>		
+	  <div class="cssICON_16_she" onclick="LocID='16_she';imgNum=1;showWind('学生宿舍16舍','十六舍位于人文科技学院旁边，为人文科技学院楼的一部分。','16_she',1)"><img src="images/icon/16_she.png" width="35.5"  /></div>	
+		
+		
+	  <div class="cssICON_xiao_lan_qiu_chang" onclick="LocID='xiao_lan_qiu_chang';imgNum=3;showWind('小篮球场','位于宿舍附近的小型篮球场，往返宿舍楼很方便，共配备有10个篮球架。体育课篮球课通常在这个篮球场上课。','xiao_lan_qiu_chang',3)"><img src="images/icon/xiao_lan_qiu_chang.png" width="61.2"  /></div>	
+	  <div class="cssICON_xiao_yi_yuan" onclick="LocID='xiao_yi_yuan';imgNum=3;showWind('校医院','崇山校区的校医院，部分疾病可开药。','xiao_yi_yuan',3)"><img src="images/icon/xiao_yi_yuan.png" width="51.5"  /></div>	
+	  <div class="cssICON_bo_shi_lou" onclick="LocID='bo_shi_lou';imgNum=3;showWind('博士楼','博士生宿舍楼，唯一一栋高层宿舍楼，配备有阳台和电梯。','bo_shi_lou',3)"><img src="images/icon/bo_shi_lou.png" width="65"  /></div>	
+		
+		
+		
+		
+		
+	  <div class="cssICON_da_xue_sheng_huo_dong_zhong_xin" onclick="LocID='da_xue_sheng_huo_dong_zhong_xin';imgNum=1;showWind('大学生活动中心','大学生活动中心位于和园餐厅（三食堂）楼上，内部有舞台，用于举办歌手大赛等活动或进行排练。','da_xue_sheng_huo_dong_zhong_xin',1)"><img src="images/icon/da_xue_sheng_huo_dong_zhong_xin.png" width="67"  /></div>	
+	  <div class="cssICON_san_shi_tang" onclick="LocID='san_shi_tang';imgNum=7;showWind('和园餐厅（原三四食堂）','和园餐厅位于九舍对面，为新装修的学生食堂，2023年夏天由原来的三食堂和四食堂打通翻新而来，整体环境较好，比较现代化。','san_shi_tang',8)"><img src="images/icon/san_shi_tang.png" width="29.5"  /></div>	
+	  
+	  <div class="cssICON_qing_zhen_shi_tang" onclick="LocID='qing_zhen_shi_tang';imgNum=1;showWind('清真食堂','清真食堂（回民食堂）位于四食堂东侧，非三餐时段不开放。','qing_zhen_shi_tang',1)"><img src="images/icon/qing_zhen_shi_tang.png" width="43"  /></div>	
+	  <div class="cssICON_xue_fu_jiu_hao" onclick="LocID='xue_fu_jiu_hao';imgNum=1;showWind('学府九号国际教育中心','学府九号国际教育中心，提供留学相关服务，内部有自习室和咖啡厅。','xue_fu_jiu_hao',1)"><img src="images/icon/xue_fu_jiu_hao.png" width="21"  /></div>	
+	  <div class="cssICON_fa_shuo_gong_yv" onclick="LocID='fa_shuo_gong_yv';imgNum=1;showWind('法硕公寓','法硕研究生公寓','fa_shuo_gong_yv',3)"><img src="images/icon/fa_shuo_gong_yv.png" width="88"  /></div>	
+	  <div class="cssICON_ma_yuan_lou" onclick="LocID='ma_yuan_lou';imgNum=3;showWind('马克思主义学院','红色的苏式三层小楼，为沈阳市历史建筑。辽大马院为国家重点马克思主义学院。','ma_yuan_lou',3)"><img src="images/icon/ma_yuan_lou.png" width="50"  /></div>
+		
+		
+		
+		
+	  <div class="cssICON_hou_qin" onclick="LocID='hou_qin';imgNum=1;showWind('后勤发展集团','红色的三层楼，为后勤发展集团的办公楼。','hou_qin',2)"><img src="images/icon/hou_qin.png" width="46"  /></div>
+	  <div class="cssICON_li_an_min_yan_jiu_yuan" onclick="LocID='li_an_min_yan_jiu_yuan';imgNum=2;showWind('李安民经济研究院','成立于2017年的经济研究院，原址为五洲园宾馆。','li_an_min_yan_jiu_yuan',2)"><img src="images/icon/li_an_min_yan_jiu_yuan.png" width="21.5"  /></div>
+	  <div class="cssICON_yan_jiu_sheng_yuan" onclick="LocID='yan_jiu_sheng_yuan';imgNum=4;showWind('博远楼','博远楼，研究生院的院楼。','yan_jiu_sheng_yuan',4)"><img src="images/icon/yan_jiu_sheng_yuan.png" width="76.4"  /></div>
+	  <div class="cssICON_guo_ji_jiao_yv_zhong_xin" onclick="LocID='guo_ji_jiao_yv_zhong_xin';imgNum=3;showWind('国际教育学院','汉语国际教育学院的院楼，有留学生在此学习。','guo_ji_jiao_yv_zhong_xin',4)"><img src="images/icon/guo_ji_jiao_yv_zhong_xin.png" width="92.5"  /></div>
+	  <div class="cssICON_cao_chang" onclick="LocID='cao_chang';imgNum=4;showWind('操场','操场位于崇山校区中部，为主要的体育运动场地，操场跑道400米，中间为足球场。傍晚操场上有时会举办演唱会，舞蹈等活动。操场位于蕙星楼附近的小门有时候不开放。','cao_chang',8)"><img src="images/icon/cao_chang.png" width="248"  /></div>
+	  <div class="cssICON_ti_yv_guan" onclick="LocID='ti_yv_guan';imgNum=2;showWind('体育馆','崇山校区体育馆位于银杏路西侧，2018年翻修，内部有乒乓球场地，进入体育馆需要换鞋或鞋套。','ti_yv_guan',2)"><img src="images/icon/ti_yv_guan.png" width="54.5"  /></div>
+	  <div class="cssICON_han_lin_yuan" onclick="LocID='han_lin_yuan';imgNum=2;showWind('翰林园公寓','翰林园，图书馆斜对面的橙色两层小楼，内部房间面积较大。','han_lin_yuan',2)"><img src="images/icon/han_lin_yuan.png" width="29.5"  /></div>
+	  <div class="cssICON_15_she" onclick="LocID='15_she';imgNum=2;showWind('15舍培训公寓','十五舍培训公寓位于图书馆对面，为三层楼房。','15_she',3)"><img src="images/icon/15_she.png" width="36"  /></div>
+	  <div class="cssICON_zheng_men" onclick="LocID='zheng_men';imgNum=3;showWind('正门','正门位于机关楼面前，与百鸟公园相隔一条马路，为白色墙面的校门，两边为半圆柱形状的门卫室，出门右手边为百鸟公园地铁站A口。','zheng_men',3)"><img src="images/icon/zheng_men.png" width="55.3"  /></div>
+	  <div class="cssICON_dong_nan_men" onclick="LocID='dong_nan_men';imgNum=3;showWind('东南门','东南门位于崇山校区东南部，怀远楼对面，为白色墙面的校门，没有限高，较大型的车辆在此门进出。','dong_nan_men',3)"><img src="images/icon/dong_nan_men.png" width="54.5"  /></div>
+		
+		
+		
+		
+	  <div class="cssICON_pai_qiu_chang" onclick="LocID='pai_qiu_chang';imgNum=2;showWind('排球场','排球场位于体育馆旁边，银杏路西侧，为2022年新修建，崇山校区的排球比赛在此举行。','pai_qiu_chang',2)"><img src="images/icon/pai_qiu_chang.png" width="53"  /></div>
+	  <div class="cssICON_wang_qiu_chang" onclick="LocID='wang_qiu_chang';imgNum=4;showWind('网球场','网球场位于操场南侧，东西阶梯后面，为2022年新建的球场。','wang_qiu_chang',4)"><img src="images/icon/wang_qiu_chang.png" width="189.4"  /></div>
+	  <div class="cssICON_xing_tan_ka_fei" onclick="LocID='xing_tan_ka_fei';imgNum=2;showWind('杏坛咖啡','银杏路旁的一间咖啡馆，可以在里面喝咖啡。','xing_tan_ka_fei',2)"><img src="images/icon/xing_tan_ka_fei.png" width="31"  /></div>
+	  <div class="cssICON_pei_dian_shi" onclick="LocID='pei_dian_shi';imgNum=3;showWind('变电所','崇山校区的变电所，位于西阶梯北侧。','pei_dian_shi',3)"><img src="images/icon/pei_dian_shi.png" width="28"  /></div>
+	  <div class="cssICON_jiao_dian_fei" onclick="LocID='jiao_dian_fei';imgNum=1;showWind('售电处','在此缴纳宿舍的电费。需要带好售电卡，交完电费之后务必在当天在宿舍一楼宿管办公室刷卡。<br>23年6月8日售电处搬至斯巴达健身中心一楼。','jiao_dian_fei',1)"><img src="images/icon/jiao_dian_fei.png" width="47"  /></div>
+	  <div class="cssICON_da_yin_dian" onclick="LocID='da_yin_dian';imgNum=2;showWind('打印店（印刷厂）','崇山校区的印刷厂，在此购买实验报告纸，也可以在这里打印，打印质量较好。','da_yin_dian',2)"><img src="images/icon/da_yin_dian.png" width="46.5"  /></div>
+		
+	  <div class="cssICON_cszl" ><img src="images/icon/cszl.png" width="1111"  /></div>
+	  <div class="cssICON_cjj" ><img src="images/icon/cjj.png" width="35.2"  /></div>
+	  <div class="cssICON_dtz" ><img src="images/icon/dtz.png" width="60"  /></div>
+		
+
+		
+		
+		
+		
+		
+	<div class="cssAuth" style="top: 525px">
+	  <p> <b>此图为在校学生自制图。非官方平面图，仅供参考。</b></p>
+	  <p> <hr style="left:1px;width:93%;"><div onClick="location='https://djyy24.top'" class="author">对江邀月 &nbsp制作&nbsp&nbsp; 2023年6月14日</div>反馈邮箱：3180235660@qq.com&nbsp;<br><div onClick="location='https://weibo.com/minecraftxiangsigu'" class="author">微博：@对江邀月NT</div></p>
+	</div>
+	<div class="menu1Bg">
+	  <img src="images/menu1.png" width="560" alt=""/>
+	</div>
+	<div class="menu2Bg">
+	  <img src="images/menu2.png" width="560" alt=""/> 
+	</div>
+	<div class="menu3Bg">
+	  <img src="images/menu3.png" width="560" alt=""/> 
+	</div>
+	
+	
+	
+	
+	
+<div id="menu11" class="menu1">
+	  <img src="images/menu1.png" width="560" alt=""/>
+		<div id="app" class= "menu_page_1">
+			输入地点：<input id="search_input" type="text" v-model='search' value=" " onClick="showDownMenu();"/>
+		&nbsp;
+		<button onclick="search();closeDownMenu()">搜索</button><hr>搜索结果：<br><div id="locHelp" style="width:95%">此处显示地点指南信息。</div>
+
+
+
+		<div id="downmenu" class="search_downmenu"><div class="inner_downmenu">
+			<ul v-for="item in searchData " style="margin:0px;padding:0;">
+    <li style="list-style-type:none;line-height:25px;" onclick="setInput();">{{ item.name }}</li>
+  </ul>
+			</div>
+			<div class="closedownmenu" onclick="closeDownMenu();" style="color:#0000CD">
+				收起
+			</div>
+			</div>
+		</div>	
+	</div>
+	<div id="menu22" class="menu2">
+	  <img src="images/menu2.png" width="560" alt=""/> 
+		<div class= "menu_page_2">
+			1.此平面图为基于HTML5的网页版平面图，通过浏览器即可使用，并带有互动功能，提供更加丰富的信息。<br>2.点击地图中的建筑图块弹出图文信息窗口，点击图片切换按钮可以查看更多图片。<br>3.在地点搜索框中输入建筑名称或者院系，店铺等名称后，点击“搜索”按钮后在地图上会突出显示所查找的地点。</button>
+		</div>	
+	</div><div id="menu33" class="menu3">
+	  <img src="images/menu3.png" width="560" alt=""/> 
+		<div class= "menu_page_3">
+			  &nbsp; &nbsp;&nbsp; &nbsp; 此平面地图为信息学院20级某本科生自制的HTML5互动地图，在基于卫星地图绘制的几何图形平面地图的基础上增加了图文信息窗口，地点搜索等互动功能。<br> &nbsp; &nbsp; &nbsp;&nbsp; 制作互动地图的想法早在一年前就有了，2022年6月曾计划制作基于JavaFX的辽大互动地图，但因为Java软件对运行环境有一定要求，可能不易于使用，从而难以推广，最终没有落实。今年学习了WEB开发，于是借助HTML5灵活易用的特点以及JavaScript对运行环境的低要求，制作了这个更易于使用的HTML5互动地图。<br> &nbsp;&nbsp; &nbsp; &nbsp; 六月份先后两次，趁着天气晴朗拍摄了共计183张崇山校区各个建筑外景照片，用于地点图文信息的编写。所有代码，文案及美工等工作都由一人完成，从5月26日开始，耗时19天完成1.0版本，实现了地点图文信息查看以及模糊搜索功能。<br> &nbsp; &nbsp;&nbsp; &nbsp; 由于一个人经历有限，掌握的信息不算多，因此地图提供的信息不够完善，后续将在更新时补充更多更准确的信息。
+<br> &nbsp;&nbsp; &nbsp; &nbsp; 23年十月份去外地实习，实习结束后差不多就毕业了，也就是将要离开了生活三年多的辽大校园。在即将离开的前几日，趁着天气晴朗拍摄了一些校园景色，算是在辽大最后的记忆了吧。随后把所拍摄的照片，以及早几年拍摄的一些比较有回忆的照片，整理之后放进了这个地图中，把大学四年的记忆留存在这里。
+
+<br> &nbsp; &nbsp; &nbsp;&nbsp; 参考资料：[1]辽宁大学官网；[2]2022年崇山校区，蒲河校区新生地图<br><br> &nbsp;&nbsp; &nbsp; &nbsp; ——对江邀月 &nbsp; &nbsp;   2023年6月（10.30更新）<br><hr>更新日志：<br>2023.6.14：1.0版正式上线<br>2023.6.16：调整颜色，优化视觉效果<br>2023.6.17：增加一些地点描述信息<br>2023.8.30：更新了新食堂的相关信息，加入了更多的照片<br>2023.10.22：加入了蕙星楼，操场等更多的照片，加入图片位置显示
+			
+		</div>	
+	</div>
+	<div class="menu_title_1" onClick="showMenu1();">
+	  <div style="position: absolute; left: 14px; top: 10px;">搜索地点</div> </div>
+	<div class="menu_title_2" onClick="showMenu2();closeDownMenu()">
+	  <div style="position: absolute;left: 17px; top:10px;"> 使用说明</div> </div>
+	<div class="menu_title_3" onClick="showMenu3();closeDownMenu()">
+	  <div style="position: absolute;left: 17px; top:10px;">&nbsp;&nbsp; 关&nbsp; 于 </div> </div>
+	
+	
+</div>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script><script>
+var vm=new Vue({
+el:"#app",
+data:{
+search:'',
+products: [
+        {
+          "name":'溯源楼 '
+        },
+        {
+          "name":'哲理楼 '
+        },
+        {
+          "name":'怀远楼 '
+        },
+        {
+          "name":'机关楼 '
+        },
+        {
+          "name":'明微楼 '
+        },
+        {
+          "name":'正门 '
+        },
+        {
+          "name":'东南门 '
+        },
+        {
+          "name":'图书馆 '
+        },
+        {
+          "name":'西阶梯 '
+        },
+        {
+          "name":'东阶梯 '
+        },
+        {
+          "name":'蕙星楼 '
+        },
+        {
+          "name":'东配楼 '
+        },
+        {
+          "name":'大礼堂 '
+        },
+        {
+          "name":'稀散元素 '
+        },
+        {
+          "name":'创新实践教学中心 '
+        },
+        {
+          "name":'继续教育学院 '
+        },
+        {
+          "name":'十六舍 '
+        },
+        {
+          "name":'网球场 '
+        },
+        {
+          "name":'变电所 '
+        },
+        {
+          "name":'杏坛咖啡 '
+        },
+        {
+          "name":'十五舍 '
+        },
+        {
+          "name":'操场 '
+        },
+        {
+          "name":'体育馆 '
+        },
+        {
+          "name":'排球场 '
+        },
+        {
+          "name":'翰林园 '
+        },
+        {
+          "name":'交电费 '
+        },
+        {
+          "name":'打印店 '
+        },
+        {
+          "name":'大篮球场 '
+        },
+        {
+          "name":'轻产实训中心 '
+        },
+        {
+          "name":'心理测试实验室 '
+        },
+        {
+          "name":'留学生宿舍 '
+        },
+        {
+          "name":'快递中心 '
+        },
+        {
+          "name":'国际教育中心 '
+        },
+        {
+          "name":'研究生院 '
+        },
+        {
+          "name":'李安民经济研究院 '
+        },
+        {
+          "name":'马克思主义学院 '
+        },
+        {
+          "name":'法硕公寓 '
+        },
+        {
+          "name":'后勤发展集团 '
+        },
+        {
+          "name":'学府九号 '
+        },
+        {
+          "name":'三食堂 '
+        },
+        {
+          "name":'清真食堂 '
+        },
+        {
+          "name":'四食堂 '
+        },
+        {
+          "name":'大学生活动中心 '
+        },
+        {
+          "name":'理贤楼 '
+        },
+        {
+          "name":'一舍 '
+        },
+        {
+          "name":'二舍 '
+        },
+        {
+          "name":'三舍 '
+        },
+        {
+          "name":'四舍 '
+        },
+        {
+          "name":'五舍 '
+        },
+        {
+          "name":'六舍 '
+        },
+        {
+          "name":'七舍 '
+        },
+        {
+          "name":'八舍 '
+        },
+        {
+          "name":'九舍 '
+        },
+        {
+          "name":'十舍 '
+        },
+        {
+          "name":'博士楼 '
+        },
+        {
+          "name":'健身中心 '
+        },
+        {
+          "name":'百果超市 '
+        },
+        {
+          "name":'浴池 '
+        },
+        {
+          "name":'桃李园食堂 '
+        },
+        {
+          "name":'校医院 '
+        },
+        {
+          "name":'小篮球场 '
+        },
+        {
+          "name":'生命科学院 '
+        },
+        {
+          "name":'信息学院 '
+        },
+        {
+          "name":'数学与统计学院 '
+        },
+        {
+          "name":'博远楼 '
+        },
+        {
+          "name":'轻型产业学院 '
+        },
+        {
+          "name":'药学院 '
+        },
+        {
+          "name":'环境学院 '
+        },
+        {
+          "name":'化学院 '
+        },
+        {
+          "name":'物理学院 '
+        },
+        {
+          "name":'公共基础学院 '
+        },
+        {
+          "name":'辽大出版社 ' 
+        },
+        {
+          "name":'辽宁大学出版社 ' 
+        },
+        {
+          "name":'和园餐厅 ' 
+        },
+        {
+          "name":'三四食堂 ' 
+        }
+      ]},
+computed:
+{//脚本的标签放在body最后面；录入列表中的name值时在字符串前面加一个空格
+	searchData:function(){
+var search=this.search;
+var searchVal="";//搜索后的数据
+if(search)
+{
+	searchVal=this.products.filter(function(product)
+{
+return Object.keys(product).some(function(key)
+{
+return String(product[key]).toLowerCase().indexOf(search)>-1;
+return String(product['questions']).toLowerCase.indexOf(search)>-1;
+}
+)
+
+}
+)
+return searchVal;
+}
+}	
+
+}
+
+
+
+}
+
+)
+
+
+
+
+
+
+</script>
+</body>
+</html>
