@@ -3,11 +3,11 @@
   <title>对江邀月的个人博客</title>
   
   <subtitle>对江邀月24</subtitle>
-  <link href="https://djyy24.top/atom.xml" rel="self"/>
+  <link href="https://djyy24.github.io/djyy24/atom.xml" rel="self"/>
   
-  <link href="https://djyy24.top/"/>
+  <link href="https://djyy24.github.io/djyy24/"/>
   <updated>2023-11-04T13:21:11.393Z</updated>
-  <id>https://djyy24.top/</id>
+  <id>https://djyy24.github.io/djyy24/</id>
   
   <author>
     <name>对江邀月24</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>日语学习笔记2</title>
-    <link href="https://djyy24.top/2023/11/04/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
-    <id>https://djyy24.top/2023/11/04/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/11/04/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
+    <id>https://djyy24.github.io/djyy24/2023/11/04/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/</id>
     <published>2023-11-04T12:38:04.000Z</published>
     <updated>2023-11-04T13:21:11.393Z</updated>
     
@@ -33,17 +33,17 @@
     
     
     
-    <category term="外语学习" scheme="https://djyy24.top/categories/%E5%A4%96%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    <category term="外语学习" scheme="https://djyy24.github.io/djyy24/categories/%E5%A4%96%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="日语" scheme="https://djyy24.top/tags/%E6%97%A5%E8%AF%AD/"/>
+    <category term="日语" scheme="https://djyy24.github.io/djyy24/tags/%E6%97%A5%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>日语学习笔记1</title>
-    <link href="https://djyy24.top/2023/10/26/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
-    <id>https://djyy24.top/2023/10/26/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/10/26/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+    <id>https://djyy24.github.io/djyy24/2023/10/26/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</id>
     <published>2023-10-26T13:38:04.000Z</published>
     <updated>2023-11-05T06:40:37.923Z</updated>
     
@@ -57,17 +57,17 @@
     
     
     
-    <category term="外语学习" scheme="https://djyy24.top/categories/%E5%A4%96%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    <category term="外语学习" scheme="https://djyy24.github.io/djyy24/categories/%E5%A4%96%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="日语" scheme="https://djyy24.top/tags/%E6%97%A5%E8%AF%AD/"/>
+    <category term="日语" scheme="https://djyy24.github.io/djyy24/tags/%E6%97%A5%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>数据库八股文</title>
-    <link href="https://djyy24.top/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/"/>
-    <id>https://djyy24.top/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/"/>
+    <id>https://djyy24.github.io/djyy24/2023/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/</id>
     <published>2023-10-10T14:32:54.000Z</published>
     <updated>2023-10-12T06:35:03.645Z</updated>
     
@@ -81,17 +81,17 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="数据库" scheme="https://djyy24.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://djyy24.github.io/djyy24/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>Java面试相关</title>
-    <link href="https://djyy24.top/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
-    <id>https://djyy24.top/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/17/Java%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
     <published>2023-08-17T06:45:43.000Z</published>
     <updated>2023-08-17T06:45:43.073Z</updated>
     
@@ -103,8 +103,8 @@
   
   <entry>
     <title>计算机组成原理04-指令系统</title>
-    <link href="https://djyy24.top/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://djyy24.top/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%8604-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</id>
     <published>2023-08-06T02:27:25.000Z</published>
     <updated>2023-08-08T02:31:25.183Z</updated>
     
@@ -119,17 +119,17 @@
     
     
     
-    <category term="计算机基础" scheme="https://djyy24.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    <category term="计算机基础" scheme="https://djyy24.github.io/djyy24/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="计算机组成原理" scheme="https://djyy24.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    <category term="计算机组成原理" scheme="https://djyy24.github.io/djyy24/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>【刘宇二创】还原《AYO》舞蹈背景中的白色小楼</title>
-    <link href="https://djyy24.top/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E8%BF%98%E5%8E%9F%E3%80%8AAYO%E3%80%8B%E8%88%9E%E8%B9%88%E8%83%8C%E6%99%AF%E4%B8%AD%E7%9A%84%E7%99%BD%E8%89%B2%E5%B0%8F%E6%A5%BC/"/>
-    <id>https://djyy24.top/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E8%BF%98%E5%8E%9F%E3%80%8AAYO%E3%80%8B%E8%88%9E%E8%B9%88%E8%83%8C%E6%99%AF%E4%B8%AD%E7%9A%84%E7%99%BD%E8%89%B2%E5%B0%8F%E6%A5%BC/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E8%BF%98%E5%8E%9F%E3%80%8AAYO%E3%80%8B%E8%88%9E%E8%B9%88%E8%83%8C%E6%99%AF%E4%B8%AD%E7%9A%84%E7%99%BD%E8%89%B2%E5%B0%8F%E6%A5%BC/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E8%BF%98%E5%8E%9F%E3%80%8AAYO%E3%80%8B%E8%88%9E%E8%B9%88%E8%83%8C%E6%99%AF%E4%B8%AD%E7%9A%84%E7%99%BD%E8%89%B2%E5%B0%8F%E6%A5%BC/</id>
     <published>2023-08-03T12:08:37.000Z</published>
     <updated>2023-08-03T13:13:18.297Z</updated>
     
@@ -143,23 +143,23 @@
     
     
     
-    <category term="手工制作" scheme="https://djyy24.top/categories/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C/"/>
+    <category term="手工制作" scheme="https://djyy24.github.io/djyy24/categories/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C/"/>
     
     
-    <category term="手作" scheme="https://djyy24.top/tags/%E6%89%8B%E4%BD%9C/"/>
+    <category term="手作" scheme="https://djyy24.github.io/djyy24/tags/%E6%89%8B%E4%BD%9C/"/>
     
-    <category term="建筑" scheme="https://djyy24.top/tags/%E5%BB%BA%E7%AD%91/"/>
+    <category term="建筑" scheme="https://djyy24.github.io/djyy24/tags/%E5%BB%BA%E7%AD%91/"/>
     
-    <category term="纸艺" scheme="https://djyy24.top/tags/%E7%BA%B8%E8%89%BA/"/>
+    <category term="纸艺" scheme="https://djyy24.github.io/djyy24/tags/%E7%BA%B8%E8%89%BA/"/>
     
-    <category term="粉丝二创" scheme="https://djyy24.top/tags/%E7%B2%89%E4%B8%9D%E4%BA%8C%E5%88%9B/"/>
+    <category term="粉丝二创" scheme="https://djyy24.github.io/djyy24/tags/%E7%B2%89%E4%B8%9D%E4%BA%8C%E5%88%9B/"/>
     
   </entry>
   
   <entry>
     <title>【刘宇二创】手工自制《文刀刘》专辑歌词影像集</title>
-    <link href="https://djyy24.top/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E6%89%8B%E5%B7%A5%E8%87%AA%E5%88%B6%E3%80%8A%E6%96%87%E5%88%80%E5%88%98%E3%80%8B%E4%B8%93%E8%BE%91%E6%AD%8C%E8%AF%8D%E5%BD%B1%E5%83%8F%E9%9B%86/"/>
-    <id>https://djyy24.top/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E6%89%8B%E5%B7%A5%E8%87%AA%E5%88%B6%E3%80%8A%E6%96%87%E5%88%80%E5%88%98%E3%80%8B%E4%B8%93%E8%BE%91%E6%AD%8C%E8%AF%8D%E5%BD%B1%E5%83%8F%E9%9B%86/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E6%89%8B%E5%B7%A5%E8%87%AA%E5%88%B6%E3%80%8A%E6%96%87%E5%88%80%E5%88%98%E3%80%8B%E4%B8%93%E8%BE%91%E6%AD%8C%E8%AF%8D%E5%BD%B1%E5%83%8F%E9%9B%86/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/03/%E3%80%90%E5%88%98%E5%AE%87%E4%BA%8C%E5%88%9B%E3%80%91%E6%89%8B%E5%B7%A5%E8%87%AA%E5%88%B6%E3%80%8A%E6%96%87%E5%88%80%E5%88%98%E3%80%8B%E4%B8%93%E8%BE%91%E6%AD%8C%E8%AF%8D%E5%BD%B1%E5%83%8F%E9%9B%86/</id>
     <published>2023-08-03T11:59:46.000Z</published>
     <updated>2023-08-03T13:12:50.467Z</updated>
     
@@ -173,23 +173,23 @@
     
     
     
-    <category term="手工制作" scheme="https://djyy24.top/categories/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C/"/>
+    <category term="手工制作" scheme="https://djyy24.github.io/djyy24/categories/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C/"/>
     
     
-    <category term="手作" scheme="https://djyy24.top/tags/%E6%89%8B%E4%BD%9C/"/>
+    <category term="手作" scheme="https://djyy24.github.io/djyy24/tags/%E6%89%8B%E4%BD%9C/"/>
     
-    <category term="纸艺" scheme="https://djyy24.top/tags/%E7%BA%B8%E8%89%BA/"/>
+    <category term="纸艺" scheme="https://djyy24.github.io/djyy24/tags/%E7%BA%B8%E8%89%BA/"/>
     
-    <category term="粉丝二创" scheme="https://djyy24.top/tags/%E7%B2%89%E4%B8%9D%E4%BA%8C%E5%88%9B/"/>
+    <category term="粉丝二创" scheme="https://djyy24.github.io/djyy24/tags/%E7%B2%89%E4%B8%9D%E4%BA%8C%E5%88%9B/"/>
     
-    <category term="非遗" scheme="https://djyy24.top/tags/%E9%9D%9E%E9%81%97/"/>
+    <category term="非遗" scheme="https://djyy24.github.io/djyy24/tags/%E9%9D%9E%E9%81%97/"/>
     
   </entry>
   
   <entry>
     <title>在线小工具页</title>
-    <link href="https://djyy24.top/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/"/>
-    <id>https://djyy24.top/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/03/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%A1%B5/</id>
     <published>2023-08-03T10:42:30.000Z</published>
     <updated>2023-09-08T13:40:48.513Z</updated>
     
@@ -205,19 +205,19 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://djyy24.top/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://djyy24.github.io/djyy24/tags/JavaScript/"/>
     
-    <category term="HTML" scheme="https://djyy24.top/tags/HTML/"/>
+    <category term="HTML" scheme="https://djyy24.github.io/djyy24/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>Simp网址导航-共享式新型导航</title>
-    <link href="https://djyy24.top/2023/08/03/Simp%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA-%E5%85%B1%E4%BA%AB%E5%BC%8F%E6%96%B0%E5%9E%8B%E5%AF%BC%E8%88%AA/"/>
-    <id>https://djyy24.top/2023/08/03/Simp%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA-%E5%85%B1%E4%BA%AB%E5%BC%8F%E6%96%B0%E5%9E%8B%E5%AF%BC%E8%88%AA/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/03/Simp%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA-%E5%85%B1%E4%BA%AB%E5%BC%8F%E6%96%B0%E5%9E%8B%E5%AF%BC%E8%88%AA/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/03/Simp%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA-%E5%85%B1%E4%BA%AB%E5%BC%8F%E6%96%B0%E5%9E%8B%E5%AF%BC%E8%88%AA/</id>
     <published>2023-08-03T02:41:41.000Z</published>
     <updated>2023-08-03T03:10:51.376Z</updated>
     
@@ -231,23 +231,23 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Java" scheme="https://djyy24.top/tags/Java/"/>
+    <category term="Java" scheme="https://djyy24.github.io/djyy24/tags/Java/"/>
     
-    <category term="Spring" scheme="https://djyy24.top/tags/Spring/"/>
+    <category term="Spring" scheme="https://djyy24.github.io/djyy24/tags/Spring/"/>
     
-    <category term="MySQL" scheme="https://djyy24.top/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://djyy24.github.io/djyy24/tags/MySQL/"/>
     
-    <category term="Vue" scheme="https://djyy24.top/tags/Vue/"/>
+    <category term="Vue" scheme="https://djyy24.github.io/djyy24/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>基于SpringBoot+Vue的图书馆信息化系统</title>
-    <link href="https://djyy24.top/2023/08/03/%E5%9F%BA%E4%BA%8ESpringBoot-Vue%E7%9A%84%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BF%A1%E6%81%AF%E5%8C%96%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://djyy24.top/2023/08/03/%E5%9F%BA%E4%BA%8ESpringBoot-Vue%E7%9A%84%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BF%A1%E6%81%AF%E5%8C%96%E7%B3%BB%E7%BB%9F/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/03/%E5%9F%BA%E4%BA%8ESpringBoot-Vue%E7%9A%84%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BF%A1%E6%81%AF%E5%8C%96%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/03/%E5%9F%BA%E4%BA%8ESpringBoot-Vue%E7%9A%84%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BF%A1%E6%81%AF%E5%8C%96%E7%B3%BB%E7%BB%9F/</id>
     <published>2023-08-03T01:51:37.000Z</published>
     <updated>2023-08-03T11:48:30.451Z</updated>
     
@@ -261,23 +261,23 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Java" scheme="https://djyy24.top/tags/Java/"/>
+    <category term="Java" scheme="https://djyy24.github.io/djyy24/tags/Java/"/>
     
-    <category term="Spring" scheme="https://djyy24.top/tags/Spring/"/>
+    <category term="Spring" scheme="https://djyy24.github.io/djyy24/tags/Spring/"/>
     
-    <category term="MySQL" scheme="https://djyy24.top/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://djyy24.github.io/djyy24/tags/MySQL/"/>
     
-    <category term="Vue" scheme="https://djyy24.top/tags/Vue/"/>
+    <category term="Vue" scheme="https://djyy24.github.io/djyy24/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>建筑楼层批量复制Mod</title>
-    <link href="https://djyy24.top/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/"/>
-    <id>https://djyy24.top/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/02/%E5%BB%BA%E7%AD%91%E6%A5%BC%E5%B1%82%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6Mod/</id>
     <published>2023-08-02T14:10:06.000Z</published>
     <updated>2023-08-02T15:24:34.737Z</updated>
     
@@ -291,19 +291,19 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Java" scheme="https://djyy24.top/tags/Java/"/>
+    <category term="Java" scheme="https://djyy24.github.io/djyy24/tags/Java/"/>
     
-    <category term="Minecraft" scheme="https://djyy24.top/tags/Minecraft/"/>
+    <category term="Minecraft" scheme="https://djyy24.github.io/djyy24/tags/Minecraft/"/>
     
   </entry>
   
   <entry>
     <title>还原90年代老式旅馆楼房</title>
-    <link href="https://djyy24.top/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/"/>
-    <id>https://djyy24.top/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/02/%E8%BF%98%E5%8E%9F90%E5%B9%B4%E4%BB%A3%E8%80%81%E5%BC%8F%E6%97%85%E9%A6%86%E6%A5%BC%E6%88%BF/</id>
     <published>2023-08-02T14:00:05.000Z</published>
     <updated>2023-08-17T07:14:53.980Z</updated>
     
@@ -317,21 +317,21 @@
     
     
     
-    <category term="Minecraft" scheme="https://djyy24.top/categories/Minecraft/"/>
+    <category term="Minecraft" scheme="https://djyy24.github.io/djyy24/categories/Minecraft/"/>
     
     
-    <category term="建筑" scheme="https://djyy24.top/tags/%E5%BB%BA%E7%AD%91/"/>
+    <category term="建筑" scheme="https://djyy24.github.io/djyy24/tags/%E5%BB%BA%E7%AD%91/"/>
     
-    <category term="Minecraft" scheme="https://djyy24.top/tags/Minecraft/"/>
+    <category term="Minecraft" scheme="https://djyy24.github.io/djyy24/tags/Minecraft/"/>
     
-    <category term="时代记忆" scheme="https://djyy24.top/tags/%E6%97%B6%E4%BB%A3%E8%AE%B0%E5%BF%86/"/>
+    <category term="时代记忆" scheme="https://djyy24.github.io/djyy24/tags/%E6%97%B6%E4%BB%A3%E8%AE%B0%E5%BF%86/"/>
     
   </entry>
   
   <entry>
     <title>基于Echarts大数据房价数据分析及可视化</title>
-    <link href="https://djyy24.top/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    <id>https://djyy24.top/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/02/%E5%9F%BA%E4%BA%8EEcharts%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
     <published>2023-08-02T11:29:47.000Z</published>
     <updated>2023-08-02T13:23:18.159Z</updated>
     
@@ -345,19 +345,19 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="大数据" scheme="https://djyy24.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="https://djyy24.github.io/djyy24/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-    <category term="Python" scheme="https://djyy24.top/tags/Python/"/>
+    <category term="Python" scheme="https://djyy24.github.io/djyy24/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>辽宁大学崇山校区WEB互动平面图</title>
-    <link href="https://djyy24.top/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/"/>
-    <id>https://djyy24.top/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/</id>
+    <link href="https://djyy24.github.io/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/"/>
+    <id>https://djyy24.github.io/djyy24/2023/08/02/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BAWEB%E4%BA%92%E5%8A%A8%E5%B9%B3%E9%9D%A2%E5%9B%BE/</id>
     <published>2023-08-02T06:27:48.000Z</published>
     <updated>2023-08-03T13:29:44.445Z</updated>
     
@@ -371,12 +371,12 @@
     
     
     
-    <category term="IT技术" scheme="https://djyy24.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    <category term="IT技术" scheme="https://djyy24.github.io/djyy24/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://djyy24.top/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://djyy24.github.io/djyy24/tags/JavaScript/"/>
     
-    <category term="HTML" scheme="https://djyy24.top/tags/HTML/"/>
+    <category term="HTML" scheme="https://djyy24.github.io/djyy24/tags/HTML/"/>
     
   </entry>
   
