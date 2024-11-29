@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>Voice Vox引擎实现QQ语音机器人</title>
+      <link href="/djyy24/2024/12/01/VoiceVox%E5%BC%95%E6%93%8E%E5%AE%9E%E7%8E%B0QQ%E8%AF%AD%E9%9F%B3%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+      <url>/djyy24/2024/12/01/VoiceVox%E5%BC%95%E6%93%8E%E5%AE%9E%E7%8E%B0QQ%E8%AF%AD%E9%9F%B3%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+      
+        <content type="html"><![CDATA[<p>该教程目标为在Window&#x2F;Linux平台搭建一个能够使用Voice Vox合成声音并自动发送语音消息的QQ机器人</p><img src="https://i0.hdslb.com/bfs/new_dyn/1db9b1ed1ea181aef4b3e5652cc31827346273252.jpg@1192w_886h.webp" width="60%"><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h5 id="一-运行平台"><a href="#一-运行平台" class="headerlink" title="一.运行平台"></a>一.运行平台</h5><p>1.Win10&#x2F;Win11普通家用版（不部署云服务器）<br>2.Linux云服务器（如需部署上云）</p><p>二.软件下载</p><p>Python3.10<br>Voicevox Engine引擎（Linux版&#x2F;Windows版）<br>Lagrange.Onebot 机器人协议端</p><h2 id="Voice-Vox引擎下载"><a href="#Voice-Vox引擎下载" class="headerlink" title="Voice Vox引擎下载"></a>Voice Vox引擎下载</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 应用程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> QQ机器人 </tag>
+            
+            <tag> 术力口 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Zunda Bot QQ群机器人</title>
+      <link href="/djyy24/2024/11/29/Zunda%20Bot%20QQ%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+      <url>/djyy24/2024/11/29/Zunda%20Bot%20QQ%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="制作背景"><a href="#制作背景" class="headerlink" title="制作背景"></a>制作背景</h2><p>迟来2年零1个月的正式版<br>2022年8月开始制作，原本是作为校园QQ群机器人使用，第一版基于cq-htt框架，原计划在当年10月做出完整版，仅做出小部分功能，在校园QQ群测试数天后因故搁置，停止开发。<br>2024年6月重启开发，加入热搜，词典功能，并加入当时热门的大语言模型（后因服务器性能问题，该功能下架）。<br>2024年11月，尘封五个月的bot再次重启开发，加入更丰富的图文信息，语音合成等功能，作为QQ群公益机器人，并更名为Zunda Bot。</p><h2 id="Bot功能及使用演示"><a href="#Bot功能及使用演示" class="headerlink" title="Bot功能及使用演示"></a>Bot功能及使用演示</h2><p>功能菜单（V1.3版）：</p><img src="https://i0.hdslb.com/bfs/new_dyn/ecba4ca0c8626aed5ab7d6d62cfbb1bb346273252.png"><p>俊达萌人像立绘作者：<br>俊达Rua（哔哩哔哩：<a href="https://space.bilibili.com/3546576465169271%EF%BC%89">https://space.bilibili.com/3546576465169271）</a><br>坂本アヒル（<a href="https://www.pixiv.net/users/12147115%EF%BC%89">https://www.pixiv.net/users/12147115）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 应用程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> QQ机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Minecraft东北城市存档</title>
       <link href="/djyy24/2024/10/16/Minecraft%E4%B8%9C%E5%8C%97%E5%9F%8E%E5%B8%82%E5%AD%98%E6%A1%A3/"/>
       <url>/djyy24/2024/10/16/Minecraft%E4%B8%9C%E5%8C%97%E5%9F%8E%E5%B8%82%E5%AD%98%E6%A1%A3/</url>
@@ -21,6 +77,33 @@
         <tags>
             
             <tag> 建筑 </tag>
+            
+            <tag> Minecraft </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>建筑楼层批量复制Mod</title>
+      <link href="/djyy24/2024/09/02/Minecraft%E7%8E%B0%E4%BB%A3%E7%AA%97%E6%88%B7%E6%A8%A1%E7%BB%84/"/>
+      <url>/djyy24/2024/09/02/Minecraft%E7%8E%B0%E4%BB%A3%E7%AA%97%E6%88%B7%E6%A8%A1%E7%BB%84/</url>
+      
+        <content type="html"><![CDATA[<p>现代窗户模组2.0为装饰方块类 Mod，包括了百种以上的现代风格窗户。窗户设计取材自东北地区城市居民楼常见的塑钢窗 &#x2F; 铝合金窗&#x2F;钢窗等，尺寸长宽包括 1×1，1×2，2×2 等，多种窗户可进行组合。用于作为建筑的窗户，增加真实感。</p><p>模组中也包括白瓷砖墙，下水管以及阳台铁支架等装饰方块，用于制作更具真实感的现代楼房。</p><p>模组下载链接（包括已制作的所有版本jar包）：</p><p><a href="javascript:void(0);">https://gitee.com/djyy2021/minecraft-mods/tree/master/%E7%8E%B0%E4%BB%A3%E7%AA%97%E6%88%B7%E6%A8%A1%E7%BB%84Forge</a></p><p><img src="https://i.mcmod.cn/editor/upload/20240916/1726477758_357590_mddg.png" alt="[MW]现代窗户-第1张图片"></p><p>模组使用 Blockbench 建模，主要用于建筑装饰，达到比较仿真的效果。</p><p><img src="https://i.mcmod.cn/editor/upload/20240916/1726477561_357590_gQac.webp" alt="[MW]现代窗户-第2张图片"></p><p><img src="https://i.mcmod.cn/editor/upload/20240421/1713637585_357590_YwXt.webp" alt="[MW]现代窗户-第3张图片"></p><p>包含 100+ 种窗户，取材自现实，还原真实的塑钢窗以及铝合金窗等。</p><p>对着窗户点击右键可以打开或关闭窗户。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
             
             <tag> Minecraft </tag>
             
